@@ -1,5 +1,5 @@
 export default function Navbar() {
-    return <nav className="bg-white border-gray-200 dark:bg-gray-900 z-30 absolute top-0 left-0 w-full opacity-60">
+    return <nav className="bg-white border-gray-200 dark:bg-gray-900 z-30 absolute top-0 left-0 w-full opacity-80">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" className="flex items-center">
           <img
@@ -8,7 +8,7 @@ export default function Navbar() {
             alt="Flowbite Logo"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
+            Londonando
           </span>
         </a>
         <button
@@ -28,9 +28,9 @@ export default function Navbar() {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
