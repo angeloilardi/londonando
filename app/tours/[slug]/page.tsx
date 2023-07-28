@@ -2,6 +2,7 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
 import { Carousel } from "flowbite-react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { Key } from "react";
 
 async function getTour(slug: string) {
   const res = await fetch(
@@ -24,6 +25,7 @@ async function getTour(slug: string) {
       json
     }
     pictures {
+        id
       url
       alt
     }
@@ -49,9 +51,10 @@ export default async function Tour({ params }: { params: { slug: string } }) {
       </h1>
 
           {tourData.pictures.length !== 0 &&
-              tourData.pictures.map((picture: { url: string,  alt: string; }) => {
+              tourData.pictures.map((picture: { url: string,  alt: string, id: string; }) => {
                   return (
-                    <Image
+                      <Image
+                        key={picture.id}
                       src={picture.url}
                       alt={picture.alt}
                       width={400}
