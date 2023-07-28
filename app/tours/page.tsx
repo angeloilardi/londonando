@@ -1,7 +1,4 @@
 
-import { RichText } from "@graphcms/rich-text-react-renderer";
-import Link from "next/link";
-
 interface Tour {
   title: string,
   slug: string,
@@ -44,8 +41,8 @@ export default async function Tours() {
   const tours = await getTours();
 console.log(tours);
   return (
-    <main className="prose w-full py-10 px-5 mx-auto">
-      <h1 className="text-3xl font-bold">SCOPRI TUTTI I TOUR</h1>
+    <main className="prose w-full py-10 px-5 mx-auto mt-5">
+      <h1 className="text-3xl font-bold mt-6">SCOPRI TUTTI I TOUR</h1>
       {tours.map((tour: Tour) => {
         return (
             <div key={tour.id}>

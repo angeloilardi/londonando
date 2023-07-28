@@ -1,4 +1,6 @@
 import { RichText } from "@graphcms/rich-text-react-renderer";
+import Image from "next/image";
+import { Carousel } from "flowbite-react";
 
 async function getTour(slug: string) {
   const res = await fetch(
@@ -11,13 +13,18 @@ async function getTour(slug: string) {
       body: JSON.stringify({
         query: `
         query MyQuery($slug: String = "slug") {
+  pages {
+    id
+  }
   page(where: {slug: $slug}) {
     id
+    title
     content {
       json
     }
-    
-    title
+    pictures {
+      url
+    }
   }
 }`,
         variables: {
@@ -34,24 +41,27 @@ export default async function Tour({ params }: { params: { slug: string } }) {
   const tourData = await getTour(params.slug);
   console.log(tourData);
   return (
-    <div className="grid-cols-[minmax(200px,250px)_minmax(40ch,_1fr)] grid gap-4">
-      <aside className="shadow-md bg-white px-1">
-        <h1 className="text-2xl py-4 px-6 font-bold">Course nav</h1>
-      </aside>
-      <main className="prose w-full py-10 px-5 mx-auto">
-        <h1 className="text-3xl font-bold mb-5">{tourData.title}</h1>
+    <main className="prose w-full py-10 px-5 mx-auto mt-6">
+      <h1 className="text-3xl font-bold mb-5 text-center mt-6">{tourData.title}</h1>
 
-        {tourData.content && (
-          <RichText
-            content={tourData?.content?.json}
-            renderers={{
-              p: ({ children }) => (
-                <p className="mb-5">{children}</p>
-              ),
-            }}
-          />
-        )}
-      </main>
-    </div>
+      {tourData.pictures.length !== 0 && (
+        <Image
+          src={tourData.pictures[0].url}
+          alt="mm"
+          width={400}
+          height={300}
+          className="mb-5"
+        />
+      )}
+
+      {tourData.content && (
+        <RichText
+          content={tourData?.content?.json}
+          renderers={{
+            p: ({ children }) => <p className="mb-5">{children}</p>,
+          }}
+        />
+      )}
+    </main>
   );
 }
