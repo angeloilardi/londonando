@@ -22,9 +22,6 @@ async function getTours() {
             pages {
                 slug
                 title
-                content {
-                    html
-                    }
                     id
                 }                  
             }
