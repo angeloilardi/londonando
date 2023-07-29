@@ -27,7 +27,12 @@ async function getTour(slug: string) {
     }
     pictures {
         id
-      url
+      url (
+        transformation: {
+        image: { resize: { width: 400, height: 300, fit: clip } }
+      }
+
+      )
       alt
     }
   }
@@ -51,23 +56,23 @@ export default async function Tour({ params }: { params: { slug: string } }) {
         {tourData.title}
       </h1>
 
-      <div className="w-90 max-w-xl h-72 my-16 mx-auto">
+      <div className="w-90 max-w-xl my-16 mx-auto aspect-[3/2]">
         <Carousel>
           {tourData.pictures.length !== 0 &&
-        tourData.pictures.map(
-          (picture: { url: string; alt: string; id: string }) => {
-            return (
-              <Image
-                key={picture.id}
-                src={picture.url}
-                alt={picture.alt}
-                width={400}
-                height={300}
-                className="mb-5"
-              />
-            );
-          }
-        )} 
+            tourData.pictures.map(
+              (picture: { url: string; alt: string; id: string }) => {
+                return (
+                  <Image
+                    key={picture.id}
+                    src={picture.url}
+                    alt={picture.alt}
+                    width={500}
+                    height={350}
+                    className="mb-5"
+                  />
+                );
+              }
+            )}
         </Carousel>
       </div>
 
