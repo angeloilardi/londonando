@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className="overflow-x-hidden">
         <Navbar></Navbar>
         {children}
-        {/* <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></Script> */}
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></Script>
       </body>
     </html>
   );
