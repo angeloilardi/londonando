@@ -2,9 +2,8 @@
 
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
-import { Carousel } from "flowbite-react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { Key } from "react";
+import { Carousel } from "flowbite-react";
 
 async function getTour(slug: string) {
   const res = await fetch(
@@ -45,30 +44,16 @@ async function getTour(slug: string) {
 
 export default async function Tour({ params }: { params: { slug: string } }) {
   const tourData = await getTour(params.slug);
+  console.log(tourData);
   return (
     <main className="prose w-full py-10 px-5 mx-auto mt-6">
       <h1 className="text-3xl font-bold mb-5 text-center mt-6">
         {tourData.title}
       </h1>
-      <Carousel className="w-full">
-        {tourData.pictures.length !== 0 &&
-          tourData.pictures.map(
-            (picture: { url: string; alt: string; id: string }) => {
-              return (
-                <img
-                  key={picture.id}
-                  src={picture.url}
-                  alt={picture.alt}
-                //   width={400}
-                //   height={300}
-                  className="mb-5"
-                />
-              );
-            }
-          )}
-      </Carousel>
 
-      {/* {tourData.pictures.length !== 0 &&
+      <div className="w-90 max-w-xl h-72 my-16 mx-auto">
+        <Carousel>
+          {tourData.pictures.length !== 0 &&
         tourData.pictures.map(
           (picture: { url: string; alt: string; id: string }) => {
             return (
@@ -82,16 +67,20 @@ export default async function Tour({ params }: { params: { slug: string } }) {
               />
             );
           }
-        )} */}
+        )} 
+        </Carousel>
+      </div>
 
-      {/* {tourData.content && (
-        <RichText
-          content={tourData?.content?.json}
-          renderers={{
-            p: ({ children }) => <p className="mb-5">{children}</p>,
-          }}
-        />
-      )} */}
+      <div className="max-w-3xl text-center mx-auto">
+        {tourData.content && (
+          <RichText
+            content={tourData?.content?.json}
+            renderers={{
+              p: ({ children }) => <p className="mb-5">{children}</p>,
+            }}
+          />
+        )}
+      </div>
     </main>
   );
 }
