@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Layout from './components/Layout';
 
 
@@ -23,7 +24,7 @@ export default function Home() {
           <div className="z-20 max-w-xl">
                     <h1 className="text-5xl lg:text-7xl">LONDONANDO</h1>
                     <h2 className='italic mt-5'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil distinctio eum atque assumenda sunt officia nulla nemo unde. Molestias laboriosam quaerat optio, cum consequatur vero! Saepe dicta eveniet harum quae.</h2>
-                    <button className= 'outline-white p-3 rounded-md outline mt-5 text-xl'>Scopri i tour</button>
+                    <Link href="/tours"><button className= 'outline-white p-3 rounded-md outline mt-5 text-xl'>Scopri i tour</button></Link>
           </div>
         </div>
       </Layout>

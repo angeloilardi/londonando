@@ -76,7 +76,7 @@ export default async function Tour({ params }: { params: { slug: string } }) {
         </Carousel>
       </div>
 
-      <div className="max-w-3xl text-center mx-auto">
+      <div className="max-w-3xl text-justify mx-auto">
         {tourData.content && (
           <RichText
             content={tourData?.content?.json}
