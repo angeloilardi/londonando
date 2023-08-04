@@ -22,6 +22,7 @@ async function getTour(slug: string) {
   page(where: {slug: $slug}) {
     id
     title
+    price
     content {
       json
     }
@@ -49,7 +50,6 @@ async function getTour(slug: string) {
 
 export default async function Tour({ params }: { params: { slug: string } }) {
   const tourData = await getTour(params.slug);
-  console.log(tourData);
   return (
     <main className="prose w-full py-10 px-5 mx-auto mt-6">
       <h1 className="text-3xl font-bold mb-5 text-center mt-6">
@@ -58,7 +58,7 @@ export default async function Tour({ params }: { params: { slug: string } }) {
 
       <div className="w-90 max-w-xl my-16 mx-auto aspect-[3/2]">
         <Carousel>
-          {tourData.pictures.length !== 0 &&
+          {tourData.pictures.length !== 0 ? (
             tourData.pictures.map(
               (picture: { url: string; alt: string; id: string }) => {
                 return (
@@ -72,7 +72,13 @@ export default async function Tour({ params }: { params: { slug: string } }) {
                   />
                 );
               }
-            )}
+            )
+          ) : (
+            <img
+              alt="..."
+              src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+            />
+          )}
         </Carousel>
       </div>
 
@@ -85,6 +91,17 @@ export default async function Tour({ params }: { params: { slug: string } }) {
             }}
           />
         )}
+        <select name="price" id="price">
+          <option value="">Seleziona il numero di partecipanti</option>
+          {tourData.price &&
+            tourData.price.map((option: string, i: number) => {
+              return (
+                <option key={i} value={i + 1}>
+                  {option}
+                </option>
+              );
+            })}
+        </select>
       </div>
     </main>
   );
