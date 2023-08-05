@@ -6,7 +6,7 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { Carousel } from "flowbite-react";
 
 async function getTour(slug: string) {
-  const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
+  const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

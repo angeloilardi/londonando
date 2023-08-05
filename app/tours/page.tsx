@@ -16,7 +16,7 @@ interface Tour {
 import { Card } from "flowbite-react";
 
 async function getTours() {
-  const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
+  const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
