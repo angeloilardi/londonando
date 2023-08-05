@@ -16,15 +16,13 @@ interface Tour {
 import { Card } from "flowbite-react";
 
 async function getTours() {
-  const response = await fetch(
-    "https://api-eu-west-2.hygraph.com/v2/cljyrgzcu0poz01uk2vye20j2/master",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query: `
+  const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: `
         query Tours {
             pages {
                 slug
@@ -46,9 +44,8 @@ async function getTours() {
   }         
             }
         `,
-      }),
-    }
-  );
+    }),
+  });
   const json = await response.json();
 
   return json.data.pages;

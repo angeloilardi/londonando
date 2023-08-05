@@ -6,15 +6,13 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { Carousel } from "flowbite-react";
 
 async function getTour(slug: string) {
-  const res = await fetch(
-    "https://api-eu-west-2.hygraph.com/v2/cljyrgzcu0poz01uk2vye20j2/master",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query: `
+  const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: `
         query MyQuery($slug: String = "slug") {
   pages {
     id
@@ -38,12 +36,11 @@ async function getTour(slug: string) {
     }
   }
 }`,
-        variables: {
-          slug: slug,
-        },
-      }),
-    }
-  );
+      variables: {
+        slug: slug,
+      },
+    }),
+  });
   const data = await res.json();
   return data.data.page;
 }
@@ -58,7 +55,7 @@ export default async function Tour({ params }: { params: { slug: string } }) {
 
       <div className="w-90 max-w-xl my-16 mx-auto aspect-[3/2]">
         <Carousel>
-          {tourData.pictures.length !== 0 ? (
+          {tourData.pictures.length !== 0 ?
             tourData.pictures.map(
               (picture: { url: string; alt: string; id: string }) => {
                 return (
@@ -73,12 +70,12 @@ export default async function Tour({ params }: { params: { slug: string } }) {
                 );
               }
             )
-          ) : (
-            <img
-              alt="..."
-              src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-            />
-          )}
+            : <img
+            alt="..."
+            src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+          />
+          }
+          
         </Carousel>
       </div>
 
