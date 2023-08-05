@@ -6,10 +6,10 @@ export default function NavbarWithCTAButton() {
   return (
     <Navbar
       fluid
-      className="z-30 absolute top-0 left-0 w-full justify-end"
+      className="bg-white z-30 absolute top-0 left-0 w-full justify-end"
     >
       <Navbar.Brand href="/">
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+        <span className="self-center whitespace-nowrap text-xl font-semibold text-black">
           LONDONANDO
         </span>
       </Navbar.Brand>
