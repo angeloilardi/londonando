@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Script from "next/script";
-import Navbar from './components/Navbar';
+import NavBar2 from './components/NavBar2';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="overflow-x-hidden">
-        <Navbar></Navbar>
+        <NavBar2></NavBar2>
         {children}
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></Script>
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></Script>
       </body>
     </html>
   );
