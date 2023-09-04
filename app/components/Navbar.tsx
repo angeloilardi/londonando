@@ -23,7 +23,7 @@ export default function NavbarWithCTAButton() {
         <Navbar.Link href="/servizi" className="text-lg">
           Servizi
         </Navbar.Link>
-        <Navbar.Link href="#" className="text-lg">
+        <Navbar.Link href="/aboutme" className="text-lg">
           Chi sono
         </Navbar.Link>
         <Navbar.Link href="#" className="text-lg">
