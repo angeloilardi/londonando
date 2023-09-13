@@ -1,32 +1,13 @@
 "use client";
 
-import { Carousel } from "flowbite-react";
+import Form from './../components/Form'
 
-export default function DefaultCarousel() {
+export default function Servizi() {
   return (
-    <div className="w-90 max-w-lg h-48 mt-24">
-        <Carousel>
-          <img
-            alt="..."
-            src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-          />
-          <img
-            alt="..."
-            src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-          />
-          <img
-            alt="..."
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-          />
-          <img
-            alt="..."
-            src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
-          />
-          <img
-            alt="..."
-            src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-          />
-        </Carousel>
+    <div className='mt-24
+    '>
+      <Form />
     </div>
   );
+  
 }
