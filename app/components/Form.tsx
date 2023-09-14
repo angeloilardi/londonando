@@ -131,7 +131,7 @@ export default function ShadowInputs() {
         <Textarea id="notes" required shadow rows={3} />
       </div>
 
-      <Button type="submit">Register new account</Button>
+      <Button type="submit">Invia richiesta</Button>
     </form>
   );
 }

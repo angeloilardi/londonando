@@ -58,7 +58,7 @@ export default async function Tours() {
       <h1 className="text-3xl font-bold mt-6 text-center">
         SCOPRI TUTTI I TOUR
       </h1>
-      <div className="flex flex-col lg:flex-row flex-wrap my-16">
+      <div className="flex flex-col md:flex-row flex-wrap my-16 gap-4">
         {tours.map((tour: Tour) => {
           return (
             <Card
