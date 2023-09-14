@@ -21,9 +21,9 @@ export default function FooterWithSocialMediaIcons() {
             <div>
               <Footer.Title title="about" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">Tour</Footer.Link>
-                <Footer.Link href="#">Servizi</Footer.Link>
-                <Footer.Link href="#">Chi sono</Footer.Link>
+                <Footer.Link href="/tour">Tour</Footer.Link>
+                <Footer.Link href="/servizi">Servizi</Footer.Link>
+                <Footer.Link href="/aboutme">Chi sono</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
