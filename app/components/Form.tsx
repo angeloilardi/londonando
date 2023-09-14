@@ -12,18 +12,20 @@ import Link from "next/link";
 
 export default function ShadowInputs() {
   return (
-    <form className="flex max-w-md flex-col gap-4">
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="name" value="Nome" />
+    <form className="flex max-w-md flex-col gap-4 justify-center mx-auto md:max-w-lg lg:max-w-xl">
+      <div className="md:grid-cols-2 md:grid md:gap-6">
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="name" value="Nome" />
+          </div>
+          <TextInput id="name" required shadow type="text" />
         </div>
-        <TextInput id="name" required shadow type="text" />
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="surname" value="Cognome" />
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="surname" value="Cognome" />
+          </div>
+          <TextInput id="surname" required shadow type="text" />
         </div>
-        <TextInput id="surname" required shadow type="text" />
       </div>
       <div>
         <div className="mb-2 block">
@@ -52,44 +54,49 @@ export default function ShadowInputs() {
           required
           shadow
           type="number"
-          min="10"
-          max="100"
+          min="1"
+          max="20"
         />
       </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="date" value="Data di arrivo" />
+      <div className="md:grid md:grid-cols-2 md:gap-6">
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="date" value="Data di arrivo" />
+          </div>
+          <TextInput
+            id="date"
+            required
+            shadow
+            type="date"
+            min={new Date().toLocaleDateString("fr-ca")}
+          />
         </div>
-        <TextInput
-          id="date"
-          required
-          shadow
-          type="date"
-          min={new Date().toLocaleDateString("fr-ca")}
-        />
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="arrival" value="Orario di arrivo" />
+          </div>
+          <TextInput id="arrival" required shadow type="time" step={900} />
+        </div>
       </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="airport" value="Aeroporto" />
+      <div className="md:grid md:grid-cols-2 md:gap-6">
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="airport" value="Aeroporto" />
+          </div>
+          <Select id="airport" required>
+            <option>Gatwick</option>
+            <option>Heathrow</option>
+            <option>Stansted</option>
+            <option>Luton</option>
+            <option>London City</option>
+          </Select>
         </div>
-        <Select id="airport" required>
-          <option>Gatwick</option>
-          <option>Heathrow</option>
-          <option>Stansted</option>
-          <option>Luton</option>
-        </Select>
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="flight" value="Codice volo" />
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="flight" value="Codice volo" />
+          </div>
+          <TextInput id="flight" required shadow type="text" />
         </div>
-        <TextInput id="flight" required shadow type="text" />
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="arrival" value="Orario di arrivo" />
-        </div>
-        <TextInput id="arrival" required shadow type="time" step={900} />
       </div>
       <div>
         <div className="mb-2 block">
@@ -103,17 +110,19 @@ export default function ShadowInputs() {
         </div>
         <TextInput id="address" required shadow type="text" />
       </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="city" value="Città" />
+      <div className="md:grid md:grid-cols-2 md:gap-6">
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="city" value="Città" />
+          </div>
+          <TextInput id="postcode" required shadow type="text" />
         </div>
-        <TextInput id="postcode" required shadow type="text" />
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="postcode" value="Postcode" />
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="postcode" value="Postcode" />
+          </div>
+          <TextInput id="city" required shadow type="text" />
         </div>
-        <TextInput id="city" required shadow type="text" />
       </div>
       <div>
         <div className="mb-2 block">
