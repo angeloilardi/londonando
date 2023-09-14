@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function ShadowInputs() {
   return (
-    <form className="flex max-w-md flex-col gap-4 justify-center mx-auto md:max-w-lg lg:max-w-xl">
+    <form className="flex max-w-md flex-col gap-4 justify-center mx-auto md:max-w-lg lg:max-w-xl p-3">
       <div className="md:grid-cols-2 md:grid md:gap-6">
         <div>
           <div className="mb-2 block">

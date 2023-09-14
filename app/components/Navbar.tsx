@@ -9,7 +9,7 @@ export default function NavbarWithCTAButton() {
       className="bg-white z-30 absolute top-0 left-0 w-full justify-end"
     >
       <Navbar.Brand href="/">
-        <span className="self-center whitespace-nowrap text-xl font-semibold text-black">
+        <span className="self-center whitespace-nowrap text-xl font-semibold">
           LONDONANDO
         </span>
       </Navbar.Brand>
