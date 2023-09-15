@@ -1,6 +1,26 @@
 'use client';
 
-import {Navbar} from 'flowbite-react';
+import { Navbar } from 'flowbite-react';
+import { NavbarLink } from 'flowbite-react/lib/esm/components/Navbar/NavbarLink';
+import { usePathname } from 'next/navigation';
+const navLinks = [
+  {
+    name: "Tour",
+    route: "tours",
+  },
+  {
+    name: "Servizi",
+    route: "servizi",
+  },
+  {
+    name: "Chi sono",
+    route: "aboutme",
+  },
+  {
+    name: "Contatti",
+    route: "contacts",
+  },
+];
 
 export default function NavbarWithCTAButton() {
   return (
@@ -17,7 +37,31 @@ export default function NavbarWithCTAButton() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse className="ml-auto p-3">
-        <Navbar.Link active href="/tours" className="text-lg">
+        {navLinks.map(link => { {
+          console.log(usePathname())
+           console.log(link.route);
+        }
+          return (
+            <Navbar.Link
+              key={link.route}
+              href={`/${link.route}`}
+              className="text-lg"
+              active={
+                usePathname() === `/${link.route}`
+                  ? true
+                  : false
+              }
+            >
+              {link.name}
+            </Navbar.Link>
+          );
+            })
+          }
+        {/* <Navbar.Link
+          active={usePathname() === "/tours" ? true : false}
+          href="/tours"
+          className="text-lg"
+        >
           Tour
         </Navbar.Link>
         <Navbar.Link href="/servizi" className="text-lg">
@@ -28,7 +72,7 @@ export default function NavbarWithCTAButton() {
         </Navbar.Link>
         <Navbar.Link href="#" className="text-lg">
           Contatti
-        </Navbar.Link>
+        </Navbar.Link> */}
       </Navbar.Collapse>
     </Navbar>
   );
