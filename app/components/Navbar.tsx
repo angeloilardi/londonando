@@ -23,6 +23,7 @@ const navLinks = [
 ];
 
 export default function NavbarWithCTAButton() {
+  const currentRoute = usePathname();
   return (
     <Navbar
       fluid
@@ -44,11 +45,7 @@ export default function NavbarWithCTAButton() {
               key={link.route}
               href={`/${link.route}`}
               className="text-lg"
-              active={
-                usePathname() === `/${link.route}`
-                  ? true
-                  : false
-              }
+              active={currentRoute === `/${link.route}` ? true : false}
             >
               {link.name}
             </Navbar.Link>
