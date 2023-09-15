@@ -38,8 +38,6 @@ export default function NavbarWithCTAButton() {
       </div>
       <Navbar.Collapse className="ml-auto p-3">
         {navLinks.map(link => { {
-          console.log(usePathname())
-           console.log(link.route);
         }
           return (
             <Navbar.Link
@@ -57,22 +55,6 @@ export default function NavbarWithCTAButton() {
           );
             })
           }
-        {/* <Navbar.Link
-          active={usePathname() === "/tours" ? true : false}
-          href="/tours"
-          className="text-lg"
-        >
-          Tour
-        </Navbar.Link>
-        <Navbar.Link href="/servizi" className="text-lg">
-          Servizi
-        </Navbar.Link>
-        <Navbar.Link href="/aboutme" className="text-lg">
-          Chi sono
-        </Navbar.Link>
-        <Navbar.Link href="#" className="text-lg">
-          Contatti
-        </Navbar.Link> */}
       </Navbar.Collapse>
     </Navbar>
   );
