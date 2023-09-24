@@ -14,9 +14,6 @@ async function getTour(slug: string) {
     body: JSON.stringify({
       query: `
         query MyQuery($slug: String = "slug") {
-  pages {
-    id
-  }
   page(where: {slug: $slug}) {
     id
     title
