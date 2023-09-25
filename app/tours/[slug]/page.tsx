@@ -48,7 +48,7 @@ async function getTour(slug: string) {
 export default async function Tour({ params }: { params: { slug: string } }) {
   const tourData = await getTour(params.slug);
   return (
-    <main className="prose w-full py-10 px-5 mx-auto mt-6">
+    <main className="prose w-full py-10 px-5 mx-auto mt-10">
         <Link href="/tours">
           <p className="text-xs">
             <BiArrowBack className="inline-block mr-2"/>
