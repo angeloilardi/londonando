@@ -49,12 +49,12 @@ export default async function Tour({ params }: { params: { slug: string } }) {
   const tourData = await getTour(params.slug);
   return (
     <main className="prose w-full py-10 px-5 mx-auto mt-10">
-        <Link href="/tours">
-          <p className="text-xs">
-            <BiArrowBack className="inline-block mr-2"/>
-            Torna indietro
-          </p>
-        </Link>
+      <Link href="/tours">
+        <p className="text-xs">
+          <BiArrowBack className="inline-block mr-2" />
+          Torna indietro
+        </p>
+      </Link>
       <h1 className="text-3xl font-bold mb-5 text-center mt-6">
         {tourData.title}
       </h1>
@@ -93,17 +93,17 @@ export default async function Tour({ params }: { params: { slug: string } }) {
             }}
           />
         )}
-        <select name="price" id="price">
-          <option value="">Seleziona il numero di partecipanti</option>
-          {tourData.price &&
-            tourData.price.map((option: string, i: number) => {
-              return (
-                <option key={i} value={i + 1}>
-                  {option}
-                </option>
-              );
-            })}
-        </select>
+          <select name="price" id="price" className="dark:bg-neutral-800">
+            <option value="">Seleziona il numero di partecipanti</option>
+            {tourData.price &&
+              tourData.price.map((option: string, i: number) => {
+                return (
+                  <option key={i} value={i + 1}>
+                    {option}
+                  </option>
+                );
+              })}
+          </select>
       </div>
     </main>
   );
