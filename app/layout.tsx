@@ -1,12 +1,12 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Alata } from 'next/font/google'
 import Script from "next/script";
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
 
-const inter = Inter({ subsets: ['latin'] })
+const alata = Alata({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: 'Londonando',
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={alata.className}>
       <body className="overflow-x-hidden">
         <Navbar></Navbar>
         {children}
