@@ -9,7 +9,7 @@ export default function Home() {
         <div className="h-[100dvh] flex items-center justify-center pl-1 pr-1 m-auto text-center overflow-x-hidden text-white font-bold">
           <div className="absolute top-0 left-0 w-full h-[100dvh] overflow-hidden">
             <video
-              className="!min-w-full !min-h-full h-0 max-w-none object-cover opacity-30"
+              className="!min-w-full !min-h-full h-0 max-w-none object-cover opacity-70"
               playsInline
               src="https://ik.imagekit.io/b4rgaux1e/Untitled.mov?updatedAt=1695578964476"
               muted
@@ -21,9 +21,9 @@ export default function Home() {
               style={{ backgroundColor: "rgb(34, 84, 112)" }}
             ></div>
           </div>
-          <div className="z-20 max-w-xl">
+          <div className="z-20 max-w-2xl">
             <h1 className="text-5xl lg:text-7xl">LONDONANDO</h1>
-            <h2 className="italic mt-5 text-xl">
+            <h2 className="italic mt-5 text-3xl">
               Tour e visite di Londra e dintorni in Italiano!
             </h2>
             <Link href="/tours">

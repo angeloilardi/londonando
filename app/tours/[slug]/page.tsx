@@ -55,7 +55,7 @@ export default async function Tour({ params }: { params: { slug: string } }) {
           Torna indietro
         </p>
       </Link>
-      <h1 className="text-3xl font-bold mb-5 text-center mt-6">
+      <h1 className="text-3xl font-bold mb-5 text-center mt-6 text-dodger_blue">
         {tourData.title}
       </h1>
       <div className="w-90 max-w-xl my-16 mx-auto aspect-[3/2]">
@@ -89,7 +89,7 @@ export default async function Tour({ params }: { params: { slug: string } }) {
           <RichText
             content={tourData?.content?.json}
             renderers={{
-              p: ({ children }) => <p className="mb-5">{children}</p>,
+              p: ({ children }) => <p className="mb-5 text-gray-800">{children}</p>,
             }}
           />
         )}
