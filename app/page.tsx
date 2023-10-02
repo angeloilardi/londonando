@@ -11,7 +11,7 @@ export default function Home() {
             <video
               className="!min-w-full !min-h-full h-0 max-w-none object-cover opacity-70"
               playsInline
-              src="https://ik.imagekit.io/b4rgaux1e/Untitled.mov?updatedAt=1695578964476"
+              src="https://ik.imagekit.io/b4rgaux1e/new.mov?updatedAt=1696262954619"
               muted
               autoPlay
               loop
