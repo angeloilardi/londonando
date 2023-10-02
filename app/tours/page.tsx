@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface Tour {
   title: string;
   slug: string;
@@ -58,15 +60,24 @@ export default async function Tours() {
       <h1 className="text-3xl font-bold mt-6 text-center text-dodger_blue-400">
         SCOPRI TUTTI I TOUR
       </h1>
-      <div className="flex flex-col md:flex-row flex-wrap my-16 gap-4">
+      <div className="flex flex-col md:flex-row flex-wrap my-16 gap-4 relative content-center">
         {tours.map((tour: Tour) => {
           return (
             <Card
+              renderImage={() => (
+                <Image
+                  className="h-[50%]"
+                  width={512}
+                  height={500}
+                  src={tour.pictures?.length ? tour.pictures[0].url : ""}
+                  alt={tour.pictures?.length ? tour.pictures[0].alt : ""}
+                />
+              )}
               href={`/tours/${tour.slug}`}
               key={tour.id}
               className="max-w-lg mx-auto gap-3 mb-4"
-              imgSrc={tour.pictures?.length ? tour.pictures[0].url : ""}
-              imgAlt={tour.pictures?.length ? tour.pictures[0].alt : ""}
+              // imgSrc={tour.pictures?.length ? tour.pictures[0].url : ""}
+              // imgAlt={tour.pictures?.length ? tour.pictures[0].alt : ""}
             >
               <div className="p-4">
                 <h5 className="text-2xl font-bold tracking-tight text-dodger_blue dark:text-white">
