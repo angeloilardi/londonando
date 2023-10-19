@@ -27,7 +27,7 @@ export default function FooterWithSocialMediaIcons() {
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="Seguimi" />
+              <Footer.Title title="Social" />
               <Footer.LinkGroup col>
                 <div className="mt-4 flex space-x-6 sm:mt-0">
                   <Footer.Icon

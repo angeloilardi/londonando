@@ -2,7 +2,6 @@
 
 import {
   Button,
-  Checkbox,
   Label,
   Select,
     TextInput,
@@ -12,9 +11,9 @@ import Link from "next/link";
 
 export default function ShadowInputs() {
   return (
-    <form className="flex max-w-md flex-col gap-4 justify-center mx-auto md:max-w-lg lg:max-w-xl p-3">
+    <form className="flex w-[70%] flex-col gap-4 justify-center mx-auto md:max-w-xl lg:max-w-xl p-3">
       <div className="md:grid-cols-2 md:grid md:gap-6">
-        <div>
+        <div className="mb-4">
           <div className="mb-2 block">
             <Label htmlFor="name" value="Nome" />
           </div>
@@ -59,7 +58,7 @@ export default function ShadowInputs() {
         />
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-6">
-        <div>
+        <div className="mb-4">
           <div className="mb-2 block">
             <Label htmlFor="date" value="Data di arrivo" />
           </div>
@@ -79,7 +78,7 @@ export default function ShadowInputs() {
         </div>
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-6">
-        <div>
+        <div className="mb-4">
           <div className="mb-2 block">
             <Label htmlFor="airport" value="Aeroporto" />
           </div>
@@ -111,7 +110,7 @@ export default function ShadowInputs() {
         <TextInput id="address" required shadow type="text" />
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-6">
-        <div>
+        <div className="mb-4">
           <div className="mb-2 block">
             <Label htmlFor="city" value="Città" />
           </div>
@@ -131,7 +130,9 @@ export default function ShadowInputs() {
         <Textarea id="notes" required shadow rows={3} />
       </div>
 
-      <Button type="submit">Invia richiesta</Button>
+      <Button type="submit" className="bg-cobalt_blue my-4">
+        Invia richiesta
+      </Button>
     </form>
   );
 }
