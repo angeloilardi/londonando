@@ -1,16 +1,19 @@
 "use client";
 
+import { useState } from "react";
+
 import {
   Button,
   Checkbox,
   Label,
   Select,
-    TextInput,
-  Textarea
+  TextInput,
+  Textarea,
 } from "flowbite-react";
 import Link from "next/link";
 
 export default function ShadowInputs() {
+  const [formChoice, setFormChoice] = useState("");
   return (
     <form className="flex w-[70%] flex-col gap-4 justify-center mx-auto md:max-w-xl lg:max-w-xl p-3">
       <div className="md:grid-cols-2 md:grid md:gap-6">
@@ -77,37 +80,38 @@ export default function ShadowInputs() {
         <div className="mb-2 block">
           <Label htmlFor="start" value="Luogo di partenza" />
         </div>
-        <Select id="start" required>
-          <option>Aeroporto</option>
-          <option>Hotel</option>
-          <option>Stazione</option>
+        <Select
+          id="start"
+          required
+          onChange={(e) => setFormChoice(e.target.value)}
+        >
+          <option value=""></option>
+          <option value="aeroporto">Aeroporto</option>
+          <option value="hotel">Hotel</option>
+          <option value="stazione">Stazione</option>
         </Select>
       </div>
 
-      <div className="md:grid md:grid-cols-2 md:gap-6">
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="airport" value="Aeroporto" />
-          </div>
-          <Select id="airport" required>
-            <option>Gatwick</option>
-            <option>Heathrow</option>
-            <option>Stansted</option>
-            <option>Luton</option>
-            <option>London City</option>
-          </Select>
-        </div>
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="address" value="Indirizzo hotel" />
-          </div>
-          <TextInput id="address" required shadow type="text" />
-        </div>
+      <div className={formChoice === "aeroporto" ? `block` : `hidden`}>
+        <Label htmlFor="airport" value="Aeroporto" className=" block mb-2" />
+        <Select id="airport" required>
+          <option>Gatwick</option>
+          <option>Heathrow</option>
+          <option>Stansted</option>
+          <option>Luton</option>
+          <option>London City</option>
+        </Select>
       </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="address" value="Nome stazione" />
-        </div>
+
+      <div className={formChoice === "hotel" ? `block` : `hidden`}>
+        <Label htmlFor="address" value="Indirizzo hotel" className="block mb-2" />
+
+        <TextInput id="address" required shadow type="text" />
+      </div>
+
+      <div className={formChoice === "stazione" ? `mb-2 block` : `hidden`}>
+        <Label htmlFor="address" value="Nome stazione" className="block mb-2" />
+
         <TextInput id="address" required shadow type="text" />
       </div>
       <div>
