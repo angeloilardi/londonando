@@ -3,7 +3,6 @@
 
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { Carousel } from "flowbite-react";
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
@@ -56,22 +55,22 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
       </h1>
       <div className="w-90 max-w-xl my-16 mx-auto aspect-[3/2]">
         <Carousel>
-          {tourData.pictures.length !== 0 ? (
-            tourData.pictures.map(
-              (picture: { url: string; alt: string; id: string }) => {
-                return (
-                  <Image
-                    key={picture.id}
-                    src={picture.url}
-                    alt={picture.alt}
-                    width={500}
-                    height={350}
-                    className="mb-5"
-                  />
-                );
-              }
-            )
-          ) : ""}
+          {tourData.pictures.length !== 0
+            ? tourData.pictures.map(
+                (picture: { url: string; alt: string; id: string }) => {
+                  return (
+                    <Image
+                      key={picture.id}
+                      src={picture.url}
+                      alt={picture.alt}
+                      width={500}
+                      height={350}
+                      className="mb-5"
+                    />
+                  );
+                }
+              )
+            : ""}
         </Carousel>
       </div>
 
@@ -80,21 +79,25 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
           <RichText
             content={tourData?.content?.json}
             renderers={{
-              p: ({ children }) => <p className="mb-5 text-gray-800">{children}</p>,
+              p: ({ children }) => (
+                <p className="mb-5 text-gray-800 dark:text-indigo-50">
+                  {children}
+                </p>
+              ),
             }}
           />
         )}
-          <select name="price" id="price" className="dark:bg-neutral-800">
-            <option value="">Seleziona il numero di partecipanti</option>
-            {tourData.price &&
-              tourData.price.map((option: string, i: number) => {
-                return (
-                  <option key={i} value={i + 1}>
-                    {option}
-                  </option>
-                );
-              })}
-          </select>
+        <select name="price" id="price" className="dark:bg-neutral-800">
+          <option value="">Seleziona il numero di partecipanti</option>
+          {tourData.price &&
+            tourData.price.map((option: string, i: number) => {
+              return (
+                <option key={i} value={i + 1}>
+                  {option}
+                </option>
+              );
+            })}
+        </select>
       </div>
     </main>
   );
