@@ -31,21 +31,15 @@ async function getTours() {
                 title
                 id
                 subtitle
-                }   
-                pages {
+                
     pictures(first: 1) {
       alt
-      url (
-        transformation: {
-        image: { resize: { width: 400, height: 300, fit: clip } }
-      }
-
-      )
+      url 
       id
-    }
-  }         
-            }
-        `,
+    }       
+     }   
+                
+  }`,
     }),
   });
   const json = await response.json();

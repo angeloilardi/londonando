@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-async-client-component */
 "use client";
 
 import { RichText } from "@graphcms/rich-text-react-renderer";
@@ -26,12 +27,7 @@ async function getTour(slug: string) {
     }
     pictures {
         id
-      url (
-        transformation: {
-        image: { resize: { width: 400, height: 300, fit: clip } }
-      }
-
-      )
+      url 
       alt
     }
   }
@@ -45,7 +41,7 @@ async function getTour(slug: string) {
   return data.data.page;
 }
 
-export default async function Tour({ params }: { params: { slug: string } }) {
+export default  async function Tour({ params }: { params: { slug: string } }) {
   const tourData = await getTour(params.slug);
   return (
     <main className="prose w-full py-10 px-5 mx-auto mt-10">
@@ -75,12 +71,7 @@ export default async function Tour({ params }: { params: { slug: string } }) {
                 );
               }
             )
-          ) : (
-            <img
-              alt="..."
-              src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-            />
-          )}
+          ) : ""}
         </Carousel>
       </div>
 
