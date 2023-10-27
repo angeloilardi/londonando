@@ -17,7 +17,7 @@ export default function FooterWithSocialMediaIcons() {
               src="#"
             />
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-12">
+          <div className="grid grid-cols-3 gap-6 sm:mt-4 sm:gap-10">
             <div>
               <Footer.Title title="about" />
               <Footer.LinkGroup col>

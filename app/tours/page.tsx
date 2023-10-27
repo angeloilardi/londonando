@@ -47,6 +47,7 @@ async function getTours() {
   return json.data.pages;
 }
 
+// eslint-disable-next-line @next/next/no-async-client-component
 export default async function Tours() {
   const tours = await getTours();
   return (
