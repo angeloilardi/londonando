@@ -33,14 +33,17 @@ export default function FooterWithSocialMediaIcons() {
                   <Footer.Icon
                     href="https://www.facebook.com/londonando.mario"
                     icon={BsFacebook}
+                    target="_blank"
                   />
                   <Footer.Icon
                     href="https://www.instagram.com/_londonando_"
                     icon={BsInstagram}
+                    target="_blank"
                   />
                   <Footer.Icon
                     href="https://www.tripadvisor.it/Attraction_Review-g186338-d24049094-Reviews-Londonando-London_England.html"
                     icon={FaTripadvisor}
+                    target="_blank"
                   />
                 </div>
               </Footer.LinkGroup>
