@@ -1,10 +1,8 @@
-/* eslint-disable @next/next/no-async-client-component */
-"use client";
 
 import type { CustomFlowbiteTheme } from "flowbite-react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
-import { Carousel } from "flowbite-react";
+import Carousel from './../../components/Carousel'
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
 
@@ -80,7 +78,13 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
               }
             )
           ) : (
-            <img src="jjjj" alt="" />
+              
+            <Image
+              src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                alt=""
+                width={300}
+                height={300}
+            />
           )}
         </Carousel>
       </div>

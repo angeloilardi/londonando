@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 interface Tour {
@@ -7,7 +5,7 @@ interface Tour {
   slug: string;
   id: string;
   subtitle: string;
-  pictures?: [
+  pictures: [
     {
       url: string;
       alt: string;
@@ -15,9 +13,10 @@ interface Tour {
     }
   ];
 }
-import { Card } from "flowbite-react";
+import Card from './../components/Card'
 
 async function getTours() {
+  "use server";
   const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
     method: "POST",
     headers: {
@@ -31,15 +30,13 @@ async function getTours() {
                 title
                 id
                 subtitle
-                
-    pictures(first: 1) {
-      alt
-      url 
-      id
-    }       
-     }   
-                
-  }`,
+                pictures(first: 1) {
+                  alt
+                  url 
+                  id
+                  }       
+                }                 
+          }`,
     }),
   });
   const json = await response.json();
@@ -59,20 +56,20 @@ export default async function Tours() {
         {tours.map((tour: Tour) => {
           return (
             <Card
-              renderImage={() => (
-                <Image
-                  className="h-[50%]"
-                  width={512}
-                  height={500}
-                  src={tour.pictures?.length ? tour.pictures[0].url : ""}
-                  alt={tour.pictures?.length ? tour.pictures[0].alt : ""}
-                />
-              )}
+              // renderImage={() => (
+              //   <Image
+              //     className="h-[50%]"
+              //     width={512}
+              //     height={500}
+              //     src={tour.pictures?.length ? tour.pictures[0].url : ""}
+              //     alt={tour.pictures?.length ? tour.pictures[0].alt : ""}
+              //   />
+              // )}
               href={`/tours/${tour.slug}`}
               key={tour.id}
               className="max-w-lg mx-auto gap-3 mb-4"
-              // imgSrc={tour.pictures?.length ? tour.pictures[0].url : ""}
-              // imgAlt={tour.pictures?.length ? tour.pictures[0].alt : ""}
+              imgSrc={tour.pictures?.length ? tour.pictures[0].url : ""}
+              imgAlt={tour.pictures?.length ? tour.pictures[0].alt : ""}
             >
               <div className="p-4">
                 <h5 className="text-2xl font-bold tracking-tight text-dodger_blue dark:text-white">
