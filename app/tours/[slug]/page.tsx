@@ -1,12 +1,21 @@
 /* eslint-disable @next/next/no-async-client-component */
 "use client";
 
+import type { CustomFlowbiteTheme } from "flowbite-react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
 import { Carousel } from "flowbite-react";
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
 
+
+// custom theme to fix scroll not working on Chrome
+const customTheme: CustomFlowbiteTheme['carousel'] = {
+ 
+    scrollContainer: {
+      base: "flex h-full !overflow-auto snap-mandatory overflow-x-scroll scroll-smooth rounded-lg",
+    },
+};
 
 async function getTour(slug: string) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
@@ -54,23 +63,25 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
         {tourData.title}
       </h1>
       <div className="w-90 max-w-xl my-16 mx-auto aspect-[3/2]">
-        <Carousel>
-          {tourData.pictures.length !== 0
-            ? tourData.pictures.map(
-                (picture: { url: string; alt: string; id: string }) => {
-                  return (
-                    <Image
-                      key={picture.id}
-                      src={picture.url}
-                      alt={picture.alt}
-                      width={500}
-                      height={350}
-                      className="mb-5"
-                    />
-                  );
-                }
-              )
-            : ""}
+        <Carousel theme={customTheme}>
+          {tourData.pictures.length !== 0 ? (
+            tourData.pictures.map(
+              (picture: { url: string; alt: string; id: string }) => {
+                return (
+                  <Image
+                    key={picture.id}
+                    src={picture.url}
+                    alt={picture.alt}
+                    width={500}
+                    height={350}
+                    className="mb-5"
+                  />
+                );
+              }
+            )
+          ) : (
+            <img src="jjjj" alt="" />
+          )}
         </Carousel>
       </div>
 
