@@ -8,7 +8,7 @@ export default function AboutMe() {
           data-use-service-core
           defer
         />
-        <div className="elfsight-app-fb710219-8601-424c-a299-7a8b954c1451 mt-16 p-6"></div>
+        <div className="elfsight-app-fb710219-8601-424c-a299-7a8b954c1451 mt-16 p-6 bg-black"></div>
       </>
     );
 }
