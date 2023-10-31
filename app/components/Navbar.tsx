@@ -1,7 +1,6 @@
 'use client';
 
 import { Navbar } from 'flowbite-react';
-import { NavbarLink } from 'flowbite-react/lib/esm/components/Navbar/NavbarLink';
 import { usePathname } from 'next/navigation';
 const navLinks = [
   {

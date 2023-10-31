@@ -8,11 +8,10 @@ import { BiArrowBack } from "react-icons/bi";
 
 
 // custom theme to fix scroll not working on Chrome
-const customTheme: CustomFlowbiteTheme['carousel'] = {
- 
-    scrollContainer: {
-      base: "flex h-full !overflow-auto snap-mandatory overflow-x-scroll scroll-smooth rounded-lg",
-    },
+const customTheme: CustomFlowbiteTheme["carousel"] = {
+  scrollContainer: {
+    base: "flex h-full !overflow-x-auto snap-mandatory overflow-x-scroll scroll-smooth rounded-lg !overflow-y-hidden",
+  },
 };
 
 async function getTour(slug: string) {
