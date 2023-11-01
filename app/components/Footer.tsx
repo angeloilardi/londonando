@@ -19,17 +19,17 @@ export default function FooterWithSocialMediaIcons() {
           </div>
           <div className="grid grid-cols-3 gap-6 sm:mt-4 sm:gap-10">
             <div>
-              <Footer.Title title="about" />
-              <Footer.LinkGroup col>
+              <Footer.Title title="about" className="!mb-2" />
+              <Footer.LinkGroup col className="!space-y-1">
                 <Footer.Link href="/tour">Tour</Footer.Link>
                 <Footer.Link href="/servizi">Servizi</Footer.Link>
                 <Footer.Link href="/aboutme">Chi sono</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="Social" />
-              <Footer.LinkGroup col>
-                <div className="mt-4 flex space-x-6 sm:mt-0">
+              <Footer.Title title="Social" className="!mb-2" />
+              <Footer.LinkGroup col className="!space-y-1">
+                <div className="mt-2 flex space-x-4 sm:mt-0">
                   <Footer.Icon
                     href="https://www.facebook.com/londonando.mario"
                     icon={BsFacebook}
@@ -49,8 +49,8 @@ export default function FooterWithSocialMediaIcons() {
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="Legal" />
-              <Footer.LinkGroup col>
+              <Footer.Title title="Legal" className="!mb-2" />
+              <Footer.LinkGroup col className="!space-y-1">
                 <Footer.Link href="#">Privacy Policy</Footer.Link>
                 <Footer.Link href="#">Terms & Conditions</Footer.Link>
               </Footer.LinkGroup>

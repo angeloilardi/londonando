@@ -77,12 +77,11 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
               }
             )
           ) : (
-              
             <Image
               src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-                alt=""
-                width={300}
-                height={300}
+              alt=""
+              width={300}
+              height={300}
             />
           )}
         </Carousel>
@@ -101,17 +100,26 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             }}
           />
         )}
-        <select name="price" id="price" className="dark:bg-neutral-800">
-          <option value="">Seleziona il numero di partecipanti</option>
-          {tourData.price &&
-            tourData.price.map((option: string, i: number) => {
-              return (
-                <option key={i} value={i + 1}>
-                  {option}
-                </option>
-              );
-            })}
-        </select>
+        <form action="|">
+          <select name="price" id="price" className="dark:bg-neutral-800">
+            <option value="">Seleziona il numero di partecipanti</option>
+            {tourData.price &&
+              tourData.price.map((option: string, i: number) => {
+                return (
+                  <option key={i} value={i + 1}>
+                    {option}
+                  </option>
+                );
+              })}
+          </select>
+          <button
+            type="submit"
+            className="w-full group flex h-min items-center justify-center p-0.5 text-center font-medium relative focus:z-10 focus:outline-none text-white border border-transparent enabled:hover:bg-cyan-800 focus:ring-cyan-300 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800 rounded-lg focus:ring-2 bg-cobalt_blue my-4"
+          >
+            {" "}
+            Invia Richiesta
+          </button>
+        </form>
       </div>
     </main>
   );
