@@ -16,6 +16,7 @@ const customTheme: CustomFlowbiteTheme["carousel"] = {
 
 async function getTour(slug: string) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
+    cache: 'no-store',
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -40,8 +41,9 @@ async function getTour(slug: string) {
       variables: {
         slug: slug,
       },
+      
     }),
-  });
+  }, );
   const data = await res.json();
   return data.data.page;
 }
