@@ -29,7 +29,7 @@ export default function FooterWithSocialMediaIcons() {
             <div>
               <Footer.Title title="Social" className="!mb-2" />
               <Footer.LinkGroup col className="!space-y-1">
-                <div className="mt-2 flex space-x-4 sm:mt-0">
+                <div className="mt-2 flex space-x-4">
                   <Footer.Icon
                     href="https://www.facebook.com/londonando.mario"
                     icon={BsFacebook}
