@@ -1,3 +1,4 @@
+// 'use client'
 
 import type { CustomFlowbiteTheme } from "flowbite-react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
@@ -5,6 +6,7 @@ import Image from "next/image";
 import Carousel from './../../components/Carousel'
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
+import { sendForm } from "@/app/action";
 
 
 // custom theme to fix scroll not working on Chrome
@@ -16,7 +18,7 @@ const customTheme: CustomFlowbiteTheme["carousel"] = {
 
 async function getTour(slug: string) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
-    cache: 'no-store',
+    // cache: 'no-store',
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -25,6 +27,7 @@ async function getTour(slug: string) {
       query: `
         query MyQuery($slug: String = "slug") {
   page(where: {slug: $slug}) {
+    slug
     id
     title
     price
@@ -102,20 +105,21 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             }}
           />
         )}
-        <form action="|">
-          <select name="price" id="price" className="dark:bg-neutral-800">
+        <form action={sendForm}>
+          <select name="price" id="price" className="dark:bg-neutral-800" required>
             <option value="">Seleziona il numero di partecipanti</option>
             {tourData.price &&
               tourData.price.map((option: string, i: number) => {
                 return (
-                  <option key={i} value={i + 1}>
+                  <option key={i} value={option}>
                     {option}
                   </option>
                 );
               })}
           </select>
+          <input type="text" hidden defaultValue={tourData.title} name="current-route"/>
           <button
-            type="submit"
+            // type="submit"
             className="w-full group flex h-min items-center justify-center p-0.5 text-center font-medium relative focus:z-10 focus:outline-none text-white border border-transparent enabled:hover:bg-cyan-800 focus:ring-cyan-300 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800 rounded-lg focus:ring-2 bg-cobalt_blue my-4"
           >
             {" "}

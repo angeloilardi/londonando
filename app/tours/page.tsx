@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { renderImage } from "../action";
+// import { renderImage } from "../action";
 
 interface Tour {
   title: string;
