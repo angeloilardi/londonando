@@ -8,7 +8,7 @@ export default function Servizi() {
       className="mt-24 flex flex-col items-center
     "
     >
-      <div className="text-justify max-w-xl mx-4">
+      <div className="text-justify max-w-2xl mx-4">
         <h1 className="mb-6 text-xl">TRANSFER PRIVATO AEROPORTO HOTEL</h1>
         <h2 className="mb-8 text-lg leading-tight">
           Trasferimenti dall'aeroporto all'hotel su mezzo privato in maniera

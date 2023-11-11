@@ -7,7 +7,7 @@ import { UrlObject } from "url";
 function ButtonInfo(props: { url: string | UrlObject; }) {
     return (
       <Link href={props.url}>
-        <button className="flex items-center gap-3 dark:border-white border-black border p-2 rounded mt-4">
+        <button className="flex items-center gap-3 dark:border-white border-black border p-2 rounded mt-">
           Richiedi info
           <BsArrowRightCircleFill />
         </button>

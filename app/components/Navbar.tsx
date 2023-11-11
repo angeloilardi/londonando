@@ -43,7 +43,7 @@ export default function NavbarWithCTAButton() {
       <div className="flex md:order-2">
         <Navbar.Toggle />
       </div>
-      <Navbar.Collapse className="ml-auto p-3">
+      <Navbar.Collapse className="ml-auto p-3 z-30">
         {navLinks.map((link) => {
           {
           }
