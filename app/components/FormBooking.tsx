@@ -9,7 +9,7 @@ import {
 export default function FormBooking() {
     return (
       <>
-          <form className="flex w-[70%] flex-col gap-4 justify-center mx-auto md:max-w-xl lg:max-w-3xl p-3">
+          <form className="flex w-[70%] flex-col gap-4 justify-center mx-auto md:max-w-xl lg:max-w-2xl p-3">
             {/* Date and number of kids */}
             <div className="md:grid-cols-2 md:grid md:gap-6">
               {/* Date */}
