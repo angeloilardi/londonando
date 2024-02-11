@@ -6,8 +6,8 @@ import { useSearchParams } from "next/navigation";
 
 export default function Booking() {
   const searchParams = useSearchParams();
-  const tour = searchParams.get("tour");
-  const attendants = searchParams.get("num");
+  const tour = searchParams.get("tour") ?? null;
+  const attendants = searchParams.get("num") ?? null;
 
   return (
     <div className="pt-24 flex flex-col items-center">
