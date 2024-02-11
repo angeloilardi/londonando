@@ -129,7 +129,7 @@ export default function ShadowInputs() {
         <Textarea id="notes" required shadow rows={3} />
       </div>
 
-      <Button type="submit" className="bg-cobalt_blue my-4">
+      <Button type="submit" className="bg-cobalt_blue my-4 mt-6">
         Invia richiesta
       </Button>
     </form>

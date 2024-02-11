@@ -21,7 +21,7 @@ export default function FooterWithSocialMediaIcons() {
             <div>
               <Footer.Title title="about" className="!mb-2" />
               <Footer.LinkGroup col className="!space-y-1">
-                <Footer.Link href="/tour">Tour</Footer.Link>
+                <Footer.Link href="/tours">Tour</Footer.Link>
                 <Footer.Link href="/servizi">Servizi</Footer.Link>
                 <Footer.Link href="/aboutme">Chi sono</Footer.Link>
               </Footer.LinkGroup>

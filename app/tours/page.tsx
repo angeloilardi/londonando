@@ -60,7 +60,7 @@ export default async function Tours() {
       <div className="flex flex-col md:flex-row flex-wrap my-16 gap-4 relative content-center">
         {tours.map((tour: Tour) => {
           return (
-            <Card 
+            <Card
               renderImage={() => (
                 <Image
                   className="h-[50%]"
