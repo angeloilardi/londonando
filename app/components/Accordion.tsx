@@ -52,8 +52,8 @@
 //   );
 // }
 
-"use client";
+// "use client";
 
-import { Accordion } from "flowbite-react";
+// import { Accordion } from "flowbite-react";
 
-export default Accordion;
+// export default Accordion;
