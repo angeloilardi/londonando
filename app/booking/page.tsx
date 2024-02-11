@@ -5,6 +5,8 @@ import FormBooking from "../components/FormBooking";
 import { useSearchParams } from "next/navigation";
 
 
+
+
 export default function Booking() {
   const searchParams = useSearchParams();
   const tour = searchParams.get("tour") ?? null;
