@@ -33,7 +33,7 @@ export default function NavbarWithCTAButton() {
   return (
     <Navbar
       fluid
-      className="bg-alice_blue z-30 relative top-0 left-0 w-full justify-end"
+      className="bg-alice_blue z-30 absolute top-0 left-0 w-full justify-end"
     >
       <Navbar.Brand href="/">
         <span className="self-center whitespace-nowrap text-xl font-semibold">

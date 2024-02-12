@@ -16,7 +16,7 @@ module.exports = {
             },
         ],
     },
-    experimental: {
-        missingSuspenseWithCSRBailout: false,
-    },
+    // experimental: {
+    //     missingSuspenseWithCSRBailout: false,
+    // },
 }

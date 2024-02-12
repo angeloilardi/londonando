@@ -7,8 +7,8 @@ import {
 } from "flowbite-react";
 
 import Link from "next/link";
-import { BsArrowRightCircleFill } from "react-icons/bs";
-import { UrlObject } from "url";
+// import { BsArrowRightCircleFill } from "react-icons/bs";
+// import { UrlObject } from "url";
 
 interface Service {
   title: string;
@@ -54,7 +54,7 @@ export default async function Services() {
     <div className="bg-[url(https://images.unsplash.com/photo-1527007622069-3a0241e1cd8c?auto=format&fit=crop&q=80&w=2874&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover flex h-screen items-center justify-center">
       <Accordion
         collapseAll
-        className="bg-white grow-0 max-w-[80%] md:w-[60%] dark:bg-gray-900"
+        className="bg-white grow-0 max-w-[80%] md:w-[60%] dark:bg-gray-900 mt-6"
       >
         {services.map((service: Service) => {
           return (
