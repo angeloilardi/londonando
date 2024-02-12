@@ -51,10 +51,11 @@ async function getServices() {
 export default async function Services() {
   const services = await getServices()
   return (
-    <div className="bg-[url(https://images.unsplash.com/photo-1527007622069-3a0241e1cd8c?auto=format&fit=crop&q=80&w=2874&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover flex h-screen items-center justify-center">
+    <div className="bg-[url(https://images.unsplash.com/photo-1527007622069-3a0241e1cd8c?auto=format&fit=crop&q=80&w=2874&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover items-center flex h-screen justify-center">
       <Accordion
         collapseAll
-        className="bg-white grow-0 max-w-[80%] md:w-[60%] dark:bg-gray-900 mt-6"
+        flush
+        className="bg-white grow-0 max-w-[80%] md:w-[60%] dark:bg-gray-900 mt-16 max-h-[80%]"
       >
         {services.map((service: Service) => {
           return (
