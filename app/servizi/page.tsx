@@ -6,13 +6,17 @@ import {
   AccordionTitle,
 } from "flowbite-react";
 
-import Link from "next/link";
+import { RichText } from "@graphcms/rich-text-react-renderer";
+
+import { RichTextContent } from "@graphcms/rich-text-types";
 // import { BsArrowRightCircleFill } from "react-icons/bs";
 // import { UrlObject } from "url";
 
 interface Service {
   title: string;
-  description: string;
+  description: {
+    json: RichTextContent
+  };
   id: string;
 }
 
@@ -37,8 +41,10 @@ async function getServices() {
       query: `
       query servicesList {
   services {
+    description {
+      json
+    }
     title
-    description
     id
   }
 }`,
@@ -62,7 +68,17 @@ export default async function Services() {
             <AccordionPanel key={service.id}>
               <AccordionTitle>{service.title}</AccordionTitle>
               <AccordionContent>
-                <p>{service.description}</p>
+                <RichText
+                  content={service.description?.json}
+                  renderers={{
+                    ul: ({ children }) => (
+                      <ul className="list-disc">{children}</ul>
+                    ),
+                    li: ({ children }) => (
+                      <li className="my-2 ml-2">{children}</li>
+                    ),
+                  }}
+                />
               </AccordionContent>
             </AccordionPanel>
           );
