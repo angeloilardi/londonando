@@ -15,7 +15,7 @@ import Link from "next/link";
 export default function ShadowInputs() {
   const [formChoice, setFormChoice] = useState("");
   return (
-    <form className="flex w-[70%] flex-col gap-4 justify-center mx-auto md:max-w-xl lg:max-w-2xl p-3">
+    <form className="flex w-[90%] flex-col gap-4 justify-center mx-auto md:max-w-xl lg:max-w-2xl p-3">
       <div className="md:grid-cols-2 md:grid md:gap-6">
         <div>
           <div className="mb-2 block">

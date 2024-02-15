@@ -5,8 +5,8 @@ import Form from "../../components/FormOther";
 export default function Servizi() {
   return (
     <div className="pt-24 flex flex-col items-center">
-      <div className="flex flex-col gap-4 text-justify max-w-2xl text-dodger_blue-400 my-6 mx-4">
-        <h1 className="text-3xl">TRANSFER PRIVATO ALTRE DESTINAZIONI</h1>
+      <div className="flex flex-col gap-4 max-w-2xl text-dodger_blue-400 my-6 mx-4">
+        <h1 className="text-3xl text-center">TRANSFER PRIVATO ALTRE DESTINAZIONI</h1>
         <h2 className="text-lgleading-tight">
           Trasferimenti su mezzo privato per escursioni, passeggiate, visite
           fuori Londra con o senza guida/accompagnatore. L'autista vi
