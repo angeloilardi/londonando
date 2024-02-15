@@ -9,8 +9,9 @@ import {
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
 import { RichTextContent } from "@graphcms/rich-text-types";
-// import { BsArrowRightCircleFill } from "react-icons/bs";
-// import { UrlObject } from "url";
+import { BsArrowRightCircleFill } from "react-icons/bs";
+import { UrlObject } from "url";
+import Link from "next/link";
 
 interface Service {
   title: string;
@@ -20,16 +21,16 @@ interface Service {
   id: string;
 }
 
-// function ButtonInfo(props: { url: string | UrlObject; }) {
-//     return (
-//       <Link href={props.url}>
-//         <button className="flex items-center gap-3 dark:border-white border-black border p-2 rounded mt-">
-//           Richiedi info
-//           <BsArrowRightCircleFill />
-//         </button>
-//       </Link>
-//     );
-// }
+function ButtonInfo(props: { url: string | UrlObject; }) {
+    return (
+      <Link href={props.url}>
+        <button className="flex items-center gap-3 dark:border-white border-black border p-1 rounded mt-2 ml-auto">
+          Richiedi info
+          <BsArrowRightCircleFill />
+        </button>
+      </Link>
+    );
+}
 
 async function getServices() {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
@@ -79,6 +80,12 @@ export default async function Services() {
                     ),
                   }}
                 />
+                {service.title.includes("AEROPORTO") ? (
+                  <ButtonInfo url={"/servizi/airport"} />
+                ) : (
+                    service.title.includes("ALTRE") ?
+                      <ButtonInfo url={"/servizi/escursioni"}/>:''
+                )}
               </AccordionContent>
             </AccordionPanel>
           );
