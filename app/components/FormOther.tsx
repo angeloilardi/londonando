@@ -1,21 +1,13 @@
-"use client";
-
 import { useState } from "react";
 
-import {
-  Button,
-  Checkbox,
-  Label,
-  Select,
-  TextInput,
-  Textarea,
-} from "flowbite-react";
+import { Button, Label, Select, TextInput, Textarea } from "flowbite-react";
 import Link from "next/link";
+import FormServices from "./FormLayout";
 
 export default function ShadowInputs() {
   const [formChoice, setFormChoice] = useState("");
   return (
-    <form className="flex w-[90%] flex-col gap-4 justify-center mx-auto md:max-w-xl lg:max-w-2xl p-3">
+    <FormServices>
       <div className="md:grid-cols-2 md:grid md:gap-6">
         <div>
           <div className="mb-2 block">
@@ -104,7 +96,11 @@ export default function ShadowInputs() {
       </div>
 
       <div className={formChoice === "hotel" ? `block` : `hidden`}>
-        <Label htmlFor="address" value="Indirizzo hotel" className="block mb-2" />
+        <Label
+          htmlFor="address"
+          value="Indirizzo hotel"
+          className="block mb-2"
+        />
 
         <TextInput id="address" required shadow type="text" />
       </div>
@@ -130,6 +126,6 @@ export default function ShadowInputs() {
       <Button type="submit" className="bg-cobalt_blue my-4">
         Invia richiesta
       </Button>
-    </form>
+    </FormServices>
   );
 }

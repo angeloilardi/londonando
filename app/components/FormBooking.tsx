@@ -5,11 +5,12 @@ import {
   TextInput,
   Textarea,
 } from "flowbite-react";
+import FormLayout from "./FormLayout";
 
 export default function FormBooking() {
     return (
       <>
-          <form className="flex w-[70%] flex-col gap-4 justify-center mx-auto md:max-w-xl lg:max-w-2xl p-3">
+          <FormLayout>
             {/* Date and number of kids */}
             <div className="md:grid-cols-2 md:grid md:gap-6">
               {/* Date */}
@@ -86,7 +87,7 @@ export default function FormBooking() {
             <Button type="submit" className="bg-cobalt_blue my-4">
               Invia richiesta
             </Button>
-          </form>
+          </FormLayout>
       </>
     );
 }

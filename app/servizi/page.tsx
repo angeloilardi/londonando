@@ -62,7 +62,7 @@ export default async function Services() {
       <Accordion
         collapseAll
         flush
-        className="bg-white grow-0 max-w-[80%] md:w-[60%] dark:bg-gray-900 my-16 max-h-[80%]"
+        className="bg-white grow-0 max-w-[80%] md:w-[60%] dark:bg-gray-900 max-h-[80%]"
       >
         {services.map((service: Service) => {
           return (

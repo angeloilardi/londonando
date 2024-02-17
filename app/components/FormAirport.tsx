@@ -1,18 +1,13 @@
+import { Button, Label, Select, TextInput, Textarea } from "flowbite-react";
 
-import {
-  Button,
-  Label,
-  Select,
-    TextInput,
-  Textarea
-} from "flowbite-react";
 import Link from "next/link";
+import FormServices from "./FormLayout";
 
 export default function ShadowInputs() {
   return (
-    <form className="flex w-[90%] flex-col gap-4 justify-center mx-auto md:max-w-xl lg:max-w-2xl p-3">
+    <FormServices>
       <div className="md:grid-cols-2 md:grid md:gap-6">
-        <div className="mb-4">
+        <div>
           <div className="mb-2 block">
             <Label htmlFor="name" value="Nome" />
           </div>
@@ -132,6 +127,6 @@ export default function ShadowInputs() {
       <Button type="submit" className="bg-cobalt_blue my-4 mt-6">
         Invia richiesta
       </Button>
-    </form>
+    </FormServices>
   );
 }

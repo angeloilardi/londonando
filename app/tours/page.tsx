@@ -53,7 +53,7 @@ async function getTours() {
 export default async function Tours() {
   const tours = await getTours();
   return (
-    <main className="prose w-full py-10 px-5 mx-auto">
+    <main className="prose w-full px-5 mx-auto">
       <h1 className="text-3xl font-bold mt-12 text-center text-dodger_blue-400">
         SCOPRI TUTTI I TOUR
       </h1>

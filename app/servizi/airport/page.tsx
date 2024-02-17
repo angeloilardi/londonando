@@ -1,12 +1,12 @@
 "use client";
 
-import Form from "../../components/FormAirport";
+import FormAirport from "../../components/FormAirport";
 
 export default function Servizi() {
   return (
-    <div className="pt-24 flex flex-col items-center">
+    <div className="py-6 flex flex-col items-center">
       <div className="flex flex-col gap-4 max-w-2xl text-dodger_blue-400 my-6 mx-4">
-        <h1 className="text-3xl text-center">TRANSFER PRIVATO AEROPORTO HOTEL</h1>
+        <h1 className="text-3xl">TRANSFER PRIVATO AEROPORTO HOTEL</h1>
         <h2 className="text-lgleading-tight">
           Trasferimenti dall'aeroporto all'hotel su mezzo privato in maniera
           comoda, veloce e sicura. Il servizio è disponibile da qualsiasi
@@ -19,7 +19,7 @@ export default function Servizi() {
           indicazioni necessarie.
         </h3>
       </div>
-      <Form />
+      <FormAirport />
     </div>
   );
 }
