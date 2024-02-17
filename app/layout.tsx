@@ -21,8 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={alata.className}>
       <meta charSet="utf-8"></meta>
-      <body className="overflow-x-hidden relative">
-        <Navbar></Navbar>
+      <body className="overflow-x-hidden relative h-screen flex flex-col">
+        <Navbar />
         {children}
         <Analytics />
         {/* <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></Script> */}

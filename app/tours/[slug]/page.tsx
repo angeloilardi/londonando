@@ -1,6 +1,6 @@
 // 'use client'
 
-import type { CustomFlowbiteTheme } from "flowbite-react";
+import { Select, type CustomFlowbiteTheme, Button } from "flowbite-react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
 import Carousel from './../../components/Carousel'
@@ -105,8 +105,8 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             }}
           />
         )}
-        <form action={sendForm}>
-          <select name="price" id="price" className="dark:bg-neutral-800" required>
+        <form action={sendForm} className="flex flex-col md:flex-row md:items-center md:gap-3">
+          <Select id="price" required className="basis-3/4 grow">
             <option value="">Seleziona il numero di partecipanti</option>
             {tourData.price &&
               tourData.price.map((option: string, i: number) => {
@@ -116,15 +116,20 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
                   </option>
                 );
               })}
-          </select>
-          <input type="text" hidden defaultValue={tourData.title} name="current-route"/>
-          <button
+          </Select>
+          <input
+            type="text"
+            hidden
+            defaultValue={tourData.title}
+            name="current-route"
+          />
+          <Button
             // type="submit"
             className="w-full group flex h-min items-center justify-center p-0.5 text-center font-medium relative focus:z-10 focus:outline-none text-white border border-transparent enabled:hover:bg-cyan-800 focus:ring-cyan-300 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800 rounded-lg focus:ring-2 bg-cobalt_blue my-4"
           >
             {" "}
             Invia Richiesta
-          </button>
+          </Button>
         </form>
       </div>
     </main>
