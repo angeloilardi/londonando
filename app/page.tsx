@@ -6,7 +6,7 @@ export default function Home() {
  
     return (
       <Layout>
-        <div className="h-[100dvh] flex items-center justify-center pl-1 pr-1 m-auto text-center overflow-x-hidden text-white font-bold">
+        <div className="min-h-[100dvh] w-full flex items-center justify-center pl-1 pr-1 m-auto text-center overflow-x-hidden text-white font-bold relative">
           <div className="absolute top-0 left-0 w-full h-[100dvh] overflow-hidden">
             <video
               className="!min-w-full !min-h-full h-0 max-w-none object-cover opacity-70"
