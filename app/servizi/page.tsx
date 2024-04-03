@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -16,20 +15,20 @@ import Link from "next/link";
 interface Service {
   title: string;
   description: {
-    json: RichTextContent
+    json: RichTextContent;
   };
   id: string;
 }
 
-function ButtonInfo(props: { url: string | UrlObject; }) {
-    return (
-      <Link href={props.url}>
-        <button className="flex items-center gap-3 dark:border-white border-black border p-1 rounded mt-2 ml-auto">
-          Richiedi info
-          <BsArrowRightCircleFill />
-        </button>
-      </Link>
-    );
+function ButtonInfo(props: { url: string | UrlObject }) {
+  return (
+    <Link href={props.url}>
+      <button className="flex items-center gap-3 dark:border-white border-black border p-1 rounded mt-2 ml-auto">
+        Richiedi info
+        <BsArrowRightCircleFill />
+      </button>
+    </Link>
+  );
 }
 
 async function getServices() {
@@ -56,18 +55,20 @@ async function getServices() {
 }
 
 export default async function Services() {
-  const services = await getServices()
+  const services = await getServices();
   return (
-    <div className="bg-[url(https://images.unsplash.com/photo-1530458738063-22ed42fa27c9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center items-center flex min-h-screen justify-center">
+    <div className="bg-[url(https://images.unsplash.com/photo-1530458738063-22ed42fa27c9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center items-center flex  min-h-max justify-center">
       <Accordion
         collapseAll
-        flush
-        className="bg-white grow-0 max-w-[80%] md:w-[60%] dark:bg-gray-900 max-h-[80%] opacity-90"
+        
+        className="bg-white grow-0 max-w-[80%] my-6 md:w-[60%] dark:bg-gray-900 opacity-90"
       >
         {services.map((service: Service) => {
           return (
             <AccordionPanel key={service.id}>
-              <AccordionTitle className="text-black">{service.title}</AccordionTitle>
+              <AccordionTitle className="text-black font-bold">
+                {service.title}
+              </AccordionTitle>
               <AccordionContent>
                 <RichText
                   content={service.description?.json}
