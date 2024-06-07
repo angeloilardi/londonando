@@ -77,10 +77,10 @@ export default async function Tours() {
               // imgAlt={tour.pictures?.length ? tour.pictures[0].alt : ""}
             >
               <div className="p-4">
-                <h5 className="text-2xl font-bold tracking-tight text-delft_blue dark:text-white">
+                <h5 className="text-2xl font-bold tracking-tight text-delft_blue-500 dark:text-white">
                   {tour.title}{" "}
                 </h5>
-                <p className="font-normal text-delft_blue-400 dark:text-gray-100 mt-3">
+                <p className="font-normal text-delft_blue-600 dark:text-gray-100 mt-3">
                   {tour.subtitle}{" "}
                 </p>
               </div>
