@@ -53,8 +53,8 @@ async function getTours() {
 export default async function Tours() {
   const tours = await getTours();
   return (
-    <main className="prose w-full px-5 mx-auto">
-      <h1 className="text-3xl font-bold mt-12 text-center text-dodger_blue-400">
+    <main className="prose w-full px-5 mx-auto bg-anti-flash_white dark:bg-gray-600">
+      <h1 className="text-3xl font-bold mt-12 text-center text-delft_blue dark:text-white">
         SCOPRI TUTTI I TOUR
       </h1>
       <div className="flex flex-col md:flex-row flex-wrap my-16 gap-4 relative content-center">
@@ -77,10 +77,10 @@ export default async function Tours() {
               // imgAlt={tour.pictures?.length ? tour.pictures[0].alt : ""}
             >
               <div className="p-4">
-                <h5 className="text-2xl font-bold tracking-tight text-dodger_blue dark:text-white">
+                <h5 className="text-2xl font-bold tracking-tight text-delft_blue dark:text-white">
                   {tour.title}{" "}
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-100 mt-3">
+                <p className="font-normal text-delft_blue-400 dark:text-gray-100 mt-3">
                   {tour.subtitle}{" "}
                 </p>
               </div>

@@ -33,17 +33,17 @@ export default function NavbarWithCTAButton() {
   return (
     <Navbar
       fluid
-      className="bg-alice_blue z-30 top-0 left-0 w-full justify-end"
+      className="bg-delft_blue z-30 top-0 left-0 w-full justify-end"
     >
       <Navbar.Brand href="/">
-        <span className="self-center whitespace-nowrap text-xl font-semibold">
+        <span className="self-center whitespace-nowrap text-xl font-semibold text-white">
           LONDONANDO
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
         <Navbar.Toggle />
       </div>
-      <Navbar.Collapse className="ml-auto p-3 z-30">
+      <Navbar.Collapse className="ml-auto p-3 z-30 text-white">
         {navLinks.map((link) => {
           {
           }

@@ -1,11 +1,10 @@
 import { Button, Label, Select, TextInput, Textarea } from "flowbite-react";
 
-import Link from "next/link";
-import FormServices from "./FormLayout";
+import FormLayout from "./FormLayout";
 
 export default function ShadowInputs() {
   return (
-    <FormServices>
+    <FormLayout>
       <div className="md:grid-cols-2 md:grid md:gap-6">
         <div>
           <div className="mb-2 block">
@@ -127,6 +126,6 @@ export default function ShadowInputs() {
       <Button type="submit" className="bg-cobalt_blue my-4 mt-6">
         Invia richiesta
       </Button>
-    </FormServices>
+    </FormLayout>
   );
 }

@@ -4,8 +4,8 @@ import FormAirport from "../../components/FormAirport";
 
 export default function Servizi() {
   return (
-    <div className="py-6 flex flex-col items-center">
-      <div className="flex flex-col gap-4 max-w-2xl text-dodger_blue-400 my-6 mx-4">
+    <div className="py-6 flex flex-col items-center bg-alice_blue-900 dark:bg-gray-600">
+      <div className="flex flex-col gap-4 max-w-2xl text-dodger_blue-400 dark:text-white my-6 mx-4">
         <h1 className="text-3xl">TRANSFER PRIVATO AEROPORTO HOTEL</h1>
         <h2 className="text-lgleading-tight">
           Trasferimenti dall'aeroporto all'hotel su mezzo privato in maniera
