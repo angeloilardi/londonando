@@ -23,8 +23,8 @@ const navLinks = [
 
 const customTheme = {
   active: {
-    on: "text-french_blue underline dark:text-white md:bg-transparent md:text-cyan-700 ",
-    off: "border-b border-gray-100  text-dodger_blue hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white",
+    on: "text-white underline dark:text-white md:bg-transparent md:text-cyan-700 ",
+    off: "text-dodger_blue hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 hover:text-delft_blue dark:hover:bg-gray-700 dark:hover:text-white  md:hover:bg-transparent md:hover:text-cyan-700 md:hover:text-delft_blue-800 md:dark:hover:bg-transparent md:dark:hover:text-white",
   },
 };
 
