@@ -23,18 +23,15 @@ const navLinks = [
 
 const customTheme = {
   active: {
-    on: "text-white underline dark:text-white md:bg-transparent md:text-cyan-700 ",
-    off: "text-dodger_blue hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 hover:text-delft_blue dark:hover:bg-gray-700 dark:hover:text-white  md:hover:bg-transparent md:hover:text-cyan-700 md:hover:text-delft_blue-800 md:dark:hover:bg-transparent md:dark:hover:text-white",
+    on: "text-accent underline dark:text-white md:bg-transparent md:text-cyan-700",
+    off: "hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white  md:hover:bg-transparent md:hover:text-cyan-700 md:hover:text-accent md:dark:hover:bg-transparent md:dark:hover:text-white",
   },
 };
 
 export default function NavbarWithCTAButton() {
   const currentRoute = usePathname();
   return (
-    <Navbar
-      fluid
-      className="bg-delft_blue z-30 top-0 left-0 w-full justify-end"
-    >
+    <Navbar fluid className="bg-primary z-30 top-0 left-0 w-full justify-end">
       <Navbar.Brand href="/">
         <span className="self-center whitespace-nowrap text-xl font-semibold text-white">
           LONDONANDO
@@ -52,7 +49,7 @@ export default function NavbarWithCTAButton() {
               theme={customTheme}
               key={link.route}
               href={`/${link.route}`}
-              className="text-lg"
+              className="text-lg rounded-lg"
               active={currentRoute === `/${link.route}` ? true : false}
             >
               {link.name}

@@ -1,4 +1,3 @@
-"use client";
 
 import Image from "next/image";
 
@@ -17,16 +16,21 @@ interface Tour {
     }
   ];
 }
-import Card from "./../components/Card";
+import {Card} from 'flowbite-react'
 
-async function getTours() {
-  const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      query: `
+
+
+// eslint-disable-next-line @next/next/no-async-client-component
+export default async function Tours() {
+
+  async function getTours() {
+    const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `
         query Tours {
             pages (orderBy: order_ASC) {
                 slug
@@ -42,19 +46,17 @@ async function getTours() {
     }       
      }            
   }`,
-    }),
-  });
-  const json = await response.json();
+      }),
+    });
+    const json = await response.json();
 
-  return json.data.pages;
-}
-
-// eslint-disable-next-line @next/next/no-async-client-component
-export default async function Tours() {
+    return json.data.pages;
+  }
+  
   const tours = await getTours();
   return (
-    <main className="prose w-full px-5 mx-auto bg-anti-flash_white dark:bg-gray-600">
-      <h1 className="text-3xl font-bold mt-12 text-center text-delft_blue dark:text-white">
+    <main className="prose w-full px-5 mx-auto bg-off-white dark:bg-gray-600">
+      <h1 className="text-3xl font-bold mt-12 text-center text-primary dark:text-white">
         SCOPRI TUTTI I TOUR
       </h1>
       <div className="flex flex-col md:flex-row flex-wrap my-16 gap-4 relative content-center">
@@ -77,10 +79,10 @@ export default async function Tours() {
               // imgAlt={tour.pictures?.length ? tour.pictures[0].alt : ""}
             >
               <div className="p-4">
-                <h5 className="text-2xl font-bold tracking-tight text-delft_blue-500 dark:text-white">
+                <h5 className="text-2xl font-bold tracking-tight text-primary dark:text-white">
                   {tour.title}{" "}
                 </h5>
-                <p className="font-normal text-delft_blue-600 dark:text-gray-100 mt-3">
+                <p className="font-normal text-primary-light dark:text-gray-100 mt-3">
                   {tour.subtitle}{" "}
                 </p>
               </div>

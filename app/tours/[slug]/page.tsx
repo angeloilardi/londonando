@@ -54,14 +54,14 @@ async function getTour(slug: string) {
 export default  async function Tour({ params }: { params: { slug: string } }) {
   const tourData = await getTour(params.slug);
   return (
-    <main className="prose w-full py-10 px-5 mx-auto bg-anti-flash_white">
+    <main className="prose w-full py-10 px-5 mx-auto bg-off-white">
       <Link href="/tours">
         <p className="text-xs">
           <BiArrowBack className="inline-block mr-2" />
           Torna indietro
         </p>
       </Link>
-      <h1 className="text-3xl font-bold mb-5 text-center mt-12 text-delft_blue">
+      <h1 className="text-3xl font-bold mb-5 text-center mt-12 text-primary">
         {tourData.title}
       </h1>
       <div className="w-90 max-w-xl my-16 mx-auto aspect-[3/2]">
@@ -98,7 +98,7 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             content={tourData?.content?.json}
             renderers={{
               p: ({ children }) => (
-                <p className="mb-5 text-delft_blue-600 dark:text-indigo-50">
+                <p className="mb-5 text-primary-light dark:text-indigo-50">
                   {children}
                 </p>
               ),
@@ -125,7 +125,7 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
           />
           <Button
             type="submit"
-            className="w-full group flex h-min items-center justify-center p-0.5 text-center font-medium relative focus:z-10 focus:outline-none text-white border border-transparent enabled:hover:bg-cyan-800 focus:ring-cyan-300 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800 rounded-lg focus:ring-2 bg-cobalt_blue my-4"
+            className="w-full group flex h-min items-center justify-center p-0.5 text-center font-medium relative focus:z-10 focus:outline-none text-white border border-transparent enabled:hover:bg-cyan-800 focus:ring-cyan-300 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800 rounded-lg focus:ring-2 bg-delft_blue my-4"
           >
             {" "}
             Invia Richiesta

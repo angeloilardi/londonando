@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={alata.className}>
       <meta charSet="utf-8"></meta>
-      <body className="overflow-x-hidden relative h-screen flex flex-col">
+      <body className="overflow-x-hidden relative h-screen flex flex-col bg-anti-flash_white">
         <Navbar />
         {children}
         <Analytics />
