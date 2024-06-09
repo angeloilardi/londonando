@@ -1,20 +1,14 @@
-"use client";
-
-import { useState } from "react";
 
 import {
-  Button,
-  Checkbox,
   Label,
-  Select,
   TextInput,
   Textarea,
 } from "flowbite-react";
-import FormLayout from "./FormLayout";
 
 export default function FormContacts() {
   return (
-      <><div>
+    <>
+      <div>
       <div className="mb-2 block">
         <Label htmlFor="name" value="Nome e Cognome" />
       </div>
@@ -39,9 +33,8 @@ export default function FormContacts() {
           <Label htmlFor="message" value="Messaggio" />
         </div>
         <Textarea id="message" required shadow rows={4} />
-      </div><Button type="submit" className="bg-cobalt_blue my-4">
-        Invia richiesta
-      </Button></>
+      </div>
+    </>
 
   );
 }

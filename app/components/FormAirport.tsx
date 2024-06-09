@@ -122,10 +122,6 @@ export default function ShadowInputs() {
         </div>
         <Textarea id="notes" required shadow rows={3} />
       </div>
-
-      <Button type="submit" className="bg-primary my-4 mt-6">
-        Invia richiesta
-      </Button>
     </FormLayout>
   );
 }
