@@ -1,13 +1,12 @@
 // 'use client'
 
-import { Select, type CustomFlowbiteTheme } from "flowbite-react";
+import { Select, type CustomFlowbiteTheme, Button } from "flowbite-react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
 import Carousel from './../../components/Carousel'
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
 import { sendForm } from "@/app/action";
-import FormSubmitButton from "@/app/components/FormSubmitButton";
 
 
 // custom theme to fix scroll not working on Chrome
@@ -106,11 +105,8 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             }}
           />
         )}
-        <form
-          action={sendForm}
-          className="flex flex-col md:flex-row md:items-center md:gap-3"
-        >
-          <Select id="price" required className="basis-3/4 grow">
+        <form action={sendForm} className="flex flex-col md:flex-row md:items-center md:gap-3">
+          <Select name='price' id="price" required className="basis-3/4 grow">
             <option value="">Seleziona il numero di partecipanti</option>
             {tourData.price &&
               tourData.price.map((option: string, i: number) => {
@@ -127,14 +123,13 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             defaultValue={tourData.title}
             name="current-route"
           />
-          {/* <Button
+          <Button
             type="submit"
             className="w-full group flex h-min items-center justify-center p-0.5 text-center font-medium relative focus:z-10 focus:outline-none text-white border border-transparent enabled:hover:bg-cyan-800 focus:ring-cyan-300 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800 rounded-lg focus:ring-2 bg-primary my-4"
           >
             {" "}
             Invia Richiesta
-          </Button> */}
-         < FormSubmitButton />
+          </Button>
         </form>
       </div>
     </main>

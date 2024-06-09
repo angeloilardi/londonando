@@ -20,8 +20,8 @@ export default function Booking() {
 
 
   return (
-    <div className="py-6 flex flex-col items-center">
-      <div className="flex flex-col gap-4 max-w-2xl text-dodger_blue-400 mx-4 justify-center">
+    <div className="py-6 flex flex-col items-center bg-off-white">
+      <div className="flex flex-col gap-4 max-w-2xl justify-center w-[90%]">
         <h1 className="text-2xl">La tua richiesta:</h1>
         <Suspense>
           <GetParams />
