@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link';
 import Layout from './components/Layout';
+import { AttentionSeeker, Slide } from "react-awesome-reveal";
 
 
 export default function Home() {
@@ -22,14 +25,20 @@ export default function Home() {
             ></div>
           </div>
           <div className="z-20 max-w-2xl">
-            <h1 className="text-5xl lg:text-7xl">LONDONANDO</h1>
-            <h2 className="italic mt-5 text-3xl">
-              Tour e visite di Londra e dintorni in Italiano!
-            </h2>
+            <Slide direction='right'>
+              <h1 className="text-5xl lg:text-7xl">LONDONANDO</h1>
+            </Slide>
+            <Slide direction='left'>
+              <h2 className="italic mt-5 text-3xl">
+                Tour e visite di Londra e dintorni in Italiano!
+              </h2>
+            </Slide>
             <Link href="/tours">
-              <button className="outline-white p-3 rounded-md outline mt-5 text-xl">
-                Scopri i tour
-              </button>
+              <AttentionSeeker effect='tada' delay={1000}>
+                <button className="outline-white p-3 rounded-md outline mt-5 text-xl">
+                  Scopri i tour
+                </button>
+              </AttentionSeeker>
             </Link>
           </div>
         </div>
