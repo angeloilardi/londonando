@@ -1,17 +1,43 @@
 
 import {
   Button,
+  CustomFlowbiteTheme,
   Label,
   TextInput,
   Textarea,
+  Flowbite
 } from "flowbite-react";
 import FormLayout from "./FormLayout";
+
+const customTheme: CustomFlowbiteTheme = {
+  label: {
+    root: {
+      colors: {
+        default: "text-primary dark:text-white",
+        info: "text-cyan-500 dark:text-cyan-600",
+        failure: "text-red-700 dark:text-red-500",
+        warning: "text-yellow-500 dark:text-yellow-600",
+        success: "text-green-700 dark:text-green-500",
+      },
+    },
+  },
+  textInput: {
+    field: {
+      input: {
+        colors: {
+          // gray: "text-primary"
+        }
+      }
+    }
+  }
+};
 
 export default function FormBooking() {
     return (
       <>
-          <FormLayout>
-            {/* Date and number of kids */}
+        <FormLayout>
+          {/* Date and number of kids */}
+          <Flowbite theme={{theme: customTheme}}>
             <div className="md:grid-cols-2 md:grid md:gap-6">
               {/* Date */}
               <div className="mb-4 md:mb-0">
@@ -84,7 +110,8 @@ export default function FormBooking() {
               </div>
               <Textarea id="notes" required shadow rows={3} />
             </div>
-          </FormLayout>
+          </Flowbite>
+        </FormLayout>
       </>
     );
 }

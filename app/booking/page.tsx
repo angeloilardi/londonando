@@ -22,10 +22,12 @@ export default function Booking() {
   return (
     <div className="py-6 flex flex-col items-center bg-off-white">
       <div className="flex flex-col gap-4 max-w-2xl justify-center w-[90%]">
-        <h1 className="text-2xl">La tua richiesta:</h1>
-        <Suspense>
-          <GetParams />
-        </Suspense>
+        <div className="text-info">
+          <h1 className="text-2xl">La tua richiesta:</h1>
+          <Suspense>
+            <GetParams />
+          </Suspense>
+        </div>
       </div>
 
       <FormBooking />

@@ -1,6 +1,7 @@
 'use client';
 
 import { Navbar } from 'flowbite-react';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 const navLinks = [
   {
@@ -33,9 +34,9 @@ export default function NavbarWithCTAButton() {
   return (
     <Navbar fluid className="bg-primary z-30 top-0 left-0 w-full justify-end">
       <Navbar.Brand href="/">
-        <span className="self-center whitespace-nowrap text-xl font-semibold text-white">
-          LONDONANDO
-        </span>
+        {/* <span className="self-center whitespace-nowrap text-xl font-semibold text-white"> */}
+        <Image src='/logo.svg' width={200} height={200} quality={100} alt='' className='text-white'></Image>
+        {/* </span> */}
       </Navbar.Brand>
       <div className="flex md:order-2">
         <Navbar.Toggle />

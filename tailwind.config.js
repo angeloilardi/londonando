@@ -24,9 +24,9 @@ module.exports = {
     colors: {
       'primary': '#3498db',
       'primary-light': '#86BBD8',
-      'accent': '#DDDBFF',
+      'accent': '#FFD7C4',
       'off-white': '#f3f4f7',
-      'info': '#9EE493'
+      'info': '#FF9874'
     }
   },
   plugins: [require('flowbite/plugin')],
