@@ -62,7 +62,7 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
           Torna indietro
         </p>
       </Link>
-      <h1 className="text-3xl font-bold mb-5 text-center mt-12 text-primary">
+      <h1 className="text-3xl font-bold mb-5 text-center mt-12 text-accent">
         {tourData.title}
       </h1>
       <div className="w-90 max-w-xl my-16 mx-auto aspect-[3/2]">

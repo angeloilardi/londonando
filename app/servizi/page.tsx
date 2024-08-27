@@ -61,15 +61,22 @@ export default async function Services() {
       <Accordion
         collapseAll
         
-        className="bg-white grow-0 max-w-[80%] my-6 md:w-[60%] dark:bg-gray-900 opacity-90"
+        className="bg-primary grow-0 max-w-[80%] my-6 md:w-[60%] hover:text-primary dark:bg-gray-900 opacity-90"
       >
         {services.map((service: Service) => {
           return (
-            <AccordionPanel key={service.id}>
-              <AccordionTitle className="text-black font-bold">
+            <AccordionPanel key={service.id} className="text-white">
+              <AccordionTitle
+                theme={{
+                  open: {
+                    off: "text-white hover:text-primary dark:hover:text-white",
+                    on: "hover:text-primary text-white dark:hover:text-white dark:text-white",
+                  },
+                }}
+              >
                 {service.title}
               </AccordionTitle>
-              <AccordionContent>
+              <AccordionContent className="text-white">
                 <RichText
                   content={service.description?.json}
                   renderers={{
