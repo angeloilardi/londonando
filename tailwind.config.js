@@ -22,9 +22,9 @@ module.exports = {
     //   'off-white': '#f3f4f7'
     // }
     colors: {
-      'primary': '#3498db',
-      'primary-light': '#86BBD8',
-      'accent': '#FF9874',
+      'primary': '#1976D2',
+      'primary-light': '#64B5F6',
+      'accent': '#F28722',
       'accent-light': '#FFD7C4',
       'off-white': '#f3f4f7',
       'info': '#'

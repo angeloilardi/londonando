@@ -56,7 +56,7 @@ export default async function Tours() {
   const tours = await getTours();
   return (
     <main className="prose w-full px-5 mx-auto bg-off-white dark:bg-gray-600">
-      <h1 className="text-3xl font-bold mt-12 text-center text-primary dark:text-white">
+      <h1 className="text-3xl font-bold mt-12 text-center text-accent dark:text-white">
         SCOPRI TUTTI I TOUR
       </h1>
       <div className="flex flex-col md:flex-row flex-wrap my-16 gap-4 relative content-center">
