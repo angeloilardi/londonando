@@ -3,6 +3,10 @@
 import Link from 'next/link';
 import Layout from './components/Layout';
 import { AttentionSeeker, Slide } from "react-awesome-reveal";
+import Tours from './tours/page';
+import Services from './components/Services';
+import AboutMe from './components/AboutMe';
+import Contacts from './components/Contacts';
 
 
 export default function Home() {
@@ -42,6 +46,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <Tours></Tours>
+        <Services />
+        <AboutMe />
+        <Contacts />
       </Layout>
     );
 }

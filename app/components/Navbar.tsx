@@ -32,7 +32,7 @@ const customTheme = {
 export default function NavbarWithCTAButton() {
   const currentRoute = usePathname();
   return (
-    <Navbar fluid className="bg-primary z-30 top-0 left-0 w-full justify-end">
+    <Navbar fluid className="bg-primary z-30 top-0 left-0 w-full justify-end fixed">
       <Navbar.Brand href="/">
         {/* <span className="self-center whitespace-nowrap text-xl font-semibold text-white"> */}
         <Image src='/logo.svg' width={200} height={200} quality={200} alt=''></Image>
