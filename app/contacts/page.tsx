@@ -4,7 +4,7 @@ import FormLayout from "../components/FormLayout";
 export default function Contacts() {
     
     return (
-      <main className="bg-off-white">
+      <div id="contacts" className="bg-off-white">
         <FormLayout>
           <p className="my-6">
             Per qualsiasi domanda o chiarimento relativo alle diverse passeggiate
@@ -16,6 +16,6 @@ export default function Contacts() {
             <FormContacts />
           </div>
         </FormLayout>
-      </main>
+      </div>
     );
 }

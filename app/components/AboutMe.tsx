@@ -4,7 +4,7 @@ import ReviewsWidget from ".//ReviewsWidget"
 export default function AboutMe() {
   return (
     <>
-      <div className="bg-off-white flex flex-col flex-1 lg:flex-row">
+      <div id="aboutme" className="bg-off-white flex flex-col flex-1 lg:flex-row">
         <Image
           src="/2ca1190f-507d-4558-8456-08e3ef7b5166.jpeg"
           alt=""
