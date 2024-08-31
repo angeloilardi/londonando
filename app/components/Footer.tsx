@@ -3,19 +3,15 @@
 import { Footer } from "flowbite-react";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { FaTripadvisor } from "react-icons/fa";
+import { Logo } from "./Logo";
 
 export default function FooterWithSocialMediaIcons() {
   return (
     <Footer container className="mt-auto">
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-          <div>
-            <Footer.Brand
-              alt="Logo"
-              href="https://flowbite.com"
-              name="Londonando"
-              src="#"
-            />
+          <div className="py-4">
+            <Logo fillColor="white"/>
           </div>
           <div className="grid grid-cols-3 gap-6 sm:mt-4 sm:gap-10">
             <div>

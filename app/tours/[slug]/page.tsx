@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 
 import { Select, type CustomFlowbiteTheme, Button } from "flowbite-react";
 import { RichText } from "@graphcms/rich-text-react-renderer";

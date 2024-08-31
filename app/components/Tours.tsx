@@ -1,3 +1,5 @@
+'use serverç'
+
 import Image from "next/image";
 
 // import { renderImage } from "../action";
@@ -51,11 +53,14 @@ export default async function Tours() {
 
   const tours = await getTours();
   return (
-    <main className="prose w-full px-5 mx-auto bg-off-white dark:bg-gray-600" id="tours">
+    <main
+      className="prose w-full px-5 mx-auto bg-off-white dark:bg-gray-600"
+      id="tours"
+    >
       <h1 className="text-3xl font-bold mt-12 text-center text-accent dark:text-white">
         SCOPRI TUTTI I TOUR
       </h1>
-      <div className="flex my-16 gap-4 relative overflow-scroll">
+      <div className="flex my-16 gap-4 relative overflow-scroll snap-x snap-mandatory">
         {tours.map((tour: Tour) => {
           return (
             <Card
@@ -70,7 +75,7 @@ export default async function Tours() {
               )}
               href={`/tours/${tour.slug}`}
               key={tour.id}
-              className="min-w-[85%] mx-auto gap-3 mb-4 md:min-w-[400px]"
+              className="min-w-[85%] mx-auto gap-3 mb-4 md:min-w-[400px] snap-center"
               // imgSrc={tour.pictures?.length ? tour.pictures[0].url : ""}
               // imgAlt={tour.pictures?.length ? tour.pictures[0].alt : ""}
             >
