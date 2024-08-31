@@ -1,5 +1,3 @@
-'use serverç'
-
 import Image from "next/image";
 
 // import { renderImage } from "../action";
@@ -54,7 +52,7 @@ export default async function Tours() {
   const tours = await getTours();
   return (
     <main
-      className="prose w-full px-5 mx-auto bg-off-white dark:bg-gray-600"
+      className="prose w-full px-5 mx-auto bg-off-white dark:bg-gray-600 snap-center"
       id="tours"
     >
       <h1 className="text-3xl font-bold mt-12 text-center text-accent dark:text-white">

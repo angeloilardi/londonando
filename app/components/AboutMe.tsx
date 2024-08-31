@@ -4,7 +4,10 @@ import ReviewsWidget from ".//ReviewsWidget"
 export default function AboutMe() {
   return (
     <>
-      <div id="aboutme" className="bg-off-white flex flex-col flex-1 lg:flex-row">
+      <div
+        id="aboutme"
+        className="bg-off-white flex flex-col flex-1 lg:flex-row dark:bg-gray-600"
+      >
         <Image
           src="/2ca1190f-507d-4558-8456-08e3ef7b5166.jpeg"
           alt=""
@@ -12,7 +15,7 @@ export default function AboutMe() {
           height={300}
           className="flex-1 aspect-auto w-full object-cover"
         />
-        <div className="p-10 flex-1 text-primary">
+        <div className="p-10 flex-1 text-primary dark:text-white">
           <p>
             Per chiunque avesse voglia di rimanere incantato da tutte le
             meravigliose bellezze che fanno di Londra una delle capitali

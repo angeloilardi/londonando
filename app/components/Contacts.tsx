@@ -3,9 +3,9 @@ import FormLayout from "../components/FormLayout";
 
 export default function Contacts() {
   return (
-    <main className="bg-off-white">
+    <main className="bg-off-white dark:bg-gray-600">
       <FormLayout>
-        <p className="my-6">
+        <p className="my-6 dark:text-white">
           Per qualsiasi domanda o chiarimento relativo alle diverse passeggiate
           proposte, per personalizzare il vostro tour o per qualsiasi dubbio
           rispetto al vostro soggiorno a Londra non esitate a contattarci.
