@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-// import { renderImage } from "../action";
-
 interface Tour {
   title: string;
   slug: string;
@@ -17,7 +15,7 @@ interface Tour {
 }
 import { Card } from "flowbite-react";
 
-// eslint-disable-next-line @next/next/no-async-client-component
+
 export default async function Tours() {
   async function getTours() {
     const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
@@ -51,8 +49,8 @@ export default async function Tours() {
 
   const tours = await getTours();
   return (
-    <main
-      className="prose w-full px-5 mx-auto bg-off-white dark:bg-gray-600 snap-center"
+    <div
+      className="prose w-full px-5 mx-auto bg-off-white dark:bg-gray-600 snap-start"
       id="tours"
     >
       <h1 className="text-3xl font-bold mt-12 text-center text-accent dark:text-white">
@@ -89,6 +87,6 @@ export default async function Tours() {
           );
         })}
       </div>
-    </main>
+    </div>
   );
 }

@@ -1,6 +1,5 @@
 import './globals.css'
 import { Alata } from 'next/font/google'
-import Script from "next/script";
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
@@ -25,7 +24,6 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Analytics />
-        {/* <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></Script> */}
         <Footer />
       </body>
     </html>

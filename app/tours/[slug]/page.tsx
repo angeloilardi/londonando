@@ -1,21 +1,21 @@
-'use client'
 
-import { Select, type CustomFlowbiteTheme, Button } from "flowbite-react";
+
+import { Select, type CustomFlowbiteTheme } from "flowbite-react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
-import Carousel from './../../components/Carousel'
+import { Carousel } from "flowbite-react";
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
-import { sendForm } from "@/app/action";
+import { sendForm } from "@/app/actions";
 import FormSubmitButton from "@/app/components/FormSubmitButton";
 
 
 // custom theme to fix scroll not working on Chrome
-const customTheme: CustomFlowbiteTheme["carousel"] = {
-  scrollContainer: {
-    base: "flex h-full !overflow-x-scroll snap-mandatory overflow-x-scroll scroll-smooth rounded-lg !overflow-y-hidden",
-  },
-};
+// const customTheme: CustomFlowbiteTheme["carousel"] = {
+//   scrollContainer: {
+//     base: "flex h-full !overflow-x-scroll snap-mandatory overflow-x-scroll scroll-smooth rounded-lg !overflow-y-hidden",
+//   },
+// };
 
 async function getTour(slug: string) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
@@ -66,12 +66,12 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
         {tourData.title}
       </h1>
       <div className="w-90 max-w-xl my-16 mx-auto aspect-[3/2]">
-        <Carousel theme={customTheme}>
+        <Carousel >
           {tourData.pictures.length !== 0 ? (
             tourData.pictures.map(
               (picture: { url: string; alt: string; id: string }) => {
                 return (
-                  <Image
+                  <img
                     key={picture.id}
                     src={picture.url}
                     alt={picture.alt}
@@ -124,13 +124,6 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             defaultValue={tourData.title}
             name="current-route"
           />
-          {/* <Button
-            type="submit"
-            className="w-full group flex h-min items-center justify-center p-0.5 text-center font-medium relative focus:z-10 focus:outline-none text-white border border-transparent enabled:hover:bg-cyan-800 focus:ring-cyan-300 dark:bg-cyan-600 dark:enabled:hover:bg-cyan-700 dark:focus:ring-cyan-800 rounded-lg focus:ring-2 bg-primary my-4"
-          >
-            {" "}
-            Invia Richiesta
-          </Button> */}
           <FormSubmitButton />
         </form>
       </div>

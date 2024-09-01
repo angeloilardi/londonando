@@ -61,7 +61,7 @@ export default async function Services() {
       id="servizi"
       className="bg-[url(https://images.unsplash.com/photo-1530458738063-22ed42fa27c9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center items-center flex flex-col justify-center py-10 snap-start"
     >
-      <h3 className="text-center text-3xl">SERVIZI</h3>
+      <h3 className="text-center text-3xl text-accent">SERVIZI</h3>
       <Accordion
         collapseAll
         className="bg-primary grow-0 max-w-[80%] my-6 md:w-[60%] hover:text-primary dark:bg-gray-900 opacity-90 "
