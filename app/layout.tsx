@@ -18,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={alata.className}>
+    <html lang="en" className={`${alata.className} snap-y snap-mandatory scro`}>
       <meta charSet="utf-8"></meta>
-      <body className="overflow-x-hidden relative h-screen flex flex-col bg-anti-flash_white snap-y snap-mandatory">
+      <body className="overflow-x-hidden relative h-screen flex flex-col bg-anti-flash_white">
         <Navbar />
         {children}
         <Analytics />

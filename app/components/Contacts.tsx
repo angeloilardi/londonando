@@ -3,7 +3,10 @@ import FormLayout from "../components/FormLayout";
 
 export default function Contacts() {
   return (
-    <div className="bg-off-white dark:bg-gray-600" id="contacts">
+    <div
+      className="bg-off-white dark:bg-gray-600 snap-start"
+      id="contacts"
+    >
       <FormLayout>
         <p className="my-6 dark:text-white">
           Per qualsiasi domanda o chiarimento relativo alle diverse passeggiate

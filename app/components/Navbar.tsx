@@ -40,7 +40,7 @@ export default function NavbarWithCTAButton() {
   return (
     <Navbar
       fluid
-      className="bg-primary z-30 top-0 left-0 w-full justify-end sticky snap-start"
+      className="bg-primary z-30 top-0 left-0 w-full justify-end sticky"
     >
       <NavbarBrand href="/">
         {/* <span className="self-center whitespace-nowrap text-xl font-semibold text-white"> */}

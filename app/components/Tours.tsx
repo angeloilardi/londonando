@@ -50,10 +50,10 @@ export default async function Tours() {
   const tours = await getTours();
   return (
     <div
-      className="prose w-full px-5 mx-auto bg-off-white dark:bg-gray-600 snap-start"
+      className="prose w-full px-5 mx-auto bg-accent-light dark:bg-gray-600 snap-start min-h-screen"
       id="tours"
     >
-      <h1 className="text-3xl font-bold mt-12 text-center text-accent dark:text-white">
+      <h1 className="text-3xl font-bold mt-12 text-center text-primary dark:text-white">
         SCOPRI TUTTI I TOUR
       </h1>
       <div className="flex my-16 gap-4 relative overflow-scroll snap-x snap-mandatory">
