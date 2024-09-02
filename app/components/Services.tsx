@@ -64,7 +64,7 @@ export default async function Services() {
       <h3 className="text-center text-3xl text-white">SERVIZI</h3>
       <Accordion
         collapseAll
-        className="bg-primary grow-0 max-w-[80%] my-6 md:w-[60%] hover:text-primary dark:bg-gray-900 opacity-90 "
+        className="bg-primary grow-0 max-w-[80%] my-6 md:w-[60%] hover:text-primary dark:bg-gray-900 opacity-90"
       >
         {services.map((service: Service) => {
           return (

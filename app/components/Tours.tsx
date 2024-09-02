@@ -50,13 +50,13 @@ export default async function Tours() {
   const tours = await getTours();
   return (
     <div
-      className="prose w-full px-5 mx-auto bg-accent-light dark:bg-gray-600 snap-start min-h-screen"
+      className="w-full px-5 mx-auto bg-accent-light dark:bg-gray-600 snap-start min-h-screen flex flex-col justify-center gap-6"
       id="tours"
     >
-      <h1 className="text-3xl font-bold mt-12 text-center text-primary dark:text-white">
+      <h1 className="text-3xl font-bold mt-6 md:mt-12 text-center text-primary dark:text-white">
         SCOPRI TUTTI I TOUR
       </h1>
-      <div className="flex my-16 gap-4 relative overflow-scroll snap-x snap-mandatory">
+      <div className="flex gap-4 relative overflow-scroll snap-x snap-mandatory">
         {tours.map((tour: Tour) => {
           return (
             <Card
@@ -71,11 +71,11 @@ export default async function Tours() {
               )}
               href={`/tours/${tour.slug}`}
               key={tour.id}
-              className="min-w-[85%] mx-auto gap-3 mb-4 md:min-w-[400px] snap-center"
+              className="min-w-[85%] mx-auto gap-3 mb-4 md:min-w-[400px] snap-center min-h-min"
               // imgSrc={tour.pictures?.length ? tour.pictures[0].url : ""}
               // imgAlt={tour.pictures?.length ? tour.pictures[0].alt : ""}
             >
-              <div className="p-4">
+              <div className="p-3">
                 <h5 className="text-2xl font-bold tracking-tight text-primary dark:text-white">
                   {tour.title}{" "}
                 </h5>
