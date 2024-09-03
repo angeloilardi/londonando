@@ -59,7 +59,7 @@ export default function NavbarWithCTAButton() {
             <NavbarLink
               theme={customTheme}
               key={link.route}
-              href={`#${link.route}`}
+              href={`/#${link.route}`}
               className="text-lg rounded-lg"
               active={currentRoute.includes(`/${link.route}`) ? true : false}
             >
