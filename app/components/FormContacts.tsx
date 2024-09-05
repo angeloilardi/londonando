@@ -1,11 +1,17 @@
-
+'use client'
 import {
   Label,
   TextInput,
   Textarea,
+  Select
 } from "flowbite-react";
+import { useState } from "react";
+import FormOther from "./FormOther";
+import FormAirport from "./FormAirport";
 
 export default function FormContacts() {
+
+  const [requestType, setRequestType] = useState<string>('')
   return (
     <>
       <div>
@@ -38,11 +44,39 @@ export default function FormContacts() {
         </div>
         <TextInput id="phone" required shadow type="tel" name="phone" />
       </div>
+
+      <div className="mb-4">
+        <div className="mb-2 block">
+          <Label htmlFor="airport" value="Tipo di richiesta" />
+        </div>
+        <Select
+          required
+          onChange={(e) => setRequestType(e.target.value)}
+          value={requestType}
+        >
+          <option value="generic">Richiesta generica</option>
+          <option value="airport">Transfer aeroport/hotel</option>
+          <option value="other">Transfer altre destinazioni</option>
+        </Select>
+      </div>
+
+
+{/* fileds for airport trasnfers request */}
+      {requestType === "airport" && 
+        <FormAirport />
+      }
+
+      {/* fields for other destinations requests */}
+
+      {requestType === "other" &&
+<FormOther />
+      }
+
       <div>
         <div className="mb-2 block">
           <Label htmlFor="message" value="Messaggio" />
         </div>
-        <Textarea id="message" required shadow rows={4} name="message"/>
+        <Textarea id="message" required shadow rows={4} name="message" />
       </div>
     </>
   );

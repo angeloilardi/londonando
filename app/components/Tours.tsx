@@ -53,7 +53,7 @@ export default async function Tours() {
       className="w-full px-5 mx-auto bg-accent-light dark:bg-gray-600 snap-start min-h-screen flex flex-col justify-center gap-6"
       id="tours"
     >
-      <h1 className="text-3xl font-bold mt-6 md:mt-12 text-center text-primary dark:text-white">
+      <h1 className="text-3xl font-bold md:mt-12 text-center text-primary dark:text-white mobile-landscape:mt-2">
         SCOPRI TUTTI I TOUR
       </h1>
       <div className="flex gap-4 relative overflow-scroll snap-x snap-mandatory">
@@ -62,7 +62,7 @@ export default async function Tours() {
             <Card
               renderImage={() => (
                 <Image
-                  className="aspect-[4/3]"
+                  className="aspect-[4/3] w-full object-cover"
                   width={512}
                   height={500}
                   src={tour.pictures?.length ? tour.pictures[0].url : ""}
@@ -71,18 +71,19 @@ export default async function Tours() {
               )}
               href={`/tours/${tour.slug}`}
               key={tour.id}
-              className="min-w-[85%] mx-auto gap-3 mb-4 md:min-w-[400px] snap-center min-h-min"
-              // imgSrc={tour.pictures?.length ? tour.pictures[0].url : ""}
-              // imgAlt={tour.pictures?.length ? tour.pictures[0].alt : ""}
+              className="min-w-[85%] mx-auto gap-3 mb-4 snap-center md:min-w-[400px] mobile-landscape:min-w-[250px] min-h-fit"
+              theme={{
+                root: {
+                  children: " p-6 mobile-landscape:p-2",
+                },
+              }}
             >
-              <div className="p-3">
-                <h5 className="text-2xl font-bold tracking-tight text-primary dark:text-white">
-                  {tour.title}{" "}
-                </h5>
-                <p className="font-normal text-primary-light dark:text-gray-100 mt-3">
-                  {tour.subtitle}{" "}
-                </p>
-              </div>
+              <h5 className="text-2xl font-bold tracking-tight text-primary dark:text-white mobile-landscape:text-sm overflow-hidden">
+                {tour.title}{" "}
+              </h5>
+              <p className="font-normal text-primary-light dark:text-gray-100 mt-3 mobile-landscape:hidden">
+                {tour.subtitle}{" "}
+              </p>
             </Card>
           );
         })}

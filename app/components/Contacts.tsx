@@ -4,7 +4,7 @@ import FormLayout from "../components/FormLayout";
 export default function Contacts() {
   return (
     <div
-      className="bg-off-white dark:bg-gray-600 snap-start"
+      className="bg-accent-light dark:bg-gray-600 snap-start"
       id="contacts"
     >
       <FormLayout>
