@@ -28,6 +28,24 @@ module.exports = {
       'accent-light': '#FFD7C4',
       'off-white': '#f3f4f7',
       'info': '#'
+    },
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      'mobile-landscape': {
+        'raw': '(max-height: 640px)'
+      }
     }
   },
   plugins: [require('flowbite/plugin')],
