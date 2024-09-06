@@ -11,20 +11,34 @@ import FormAirport from "./FormAirport";
 
 export default function FormContacts() {
 
-  const [requestType, setRequestType] = useState<string>('')
+  const [requestType, setRequestType] = useState<string>('generic')
   return (
     <>
       <div>
         <div className="mb-2 block">
           <Label htmlFor="name" value="Nome e Cognome" />
         </div>
-        <TextInput id="name" required shadow type="text" name="name" />
+        <TextInput
+          id="name"
+          required
+          shadow
+          type="text"
+          name="name"
+          color="info"
+        />
       </div>
       <div>
         <div className="mb-2 block">
           <Label htmlFor="email" value="Indirizzo email" />
         </div>
-        <TextInput id="email" required shadow type="email" name="email" />
+        <TextInput
+          id="email"
+          required
+          shadow
+          type="email"
+          name="email"
+          color="info"
+        />
       </div>
       <div>
         <div className="mb-2 block">
@@ -36,13 +50,21 @@ export default function FormContacts() {
           shadow
           type="email"
           name="email-confirm"
+          color="info"
         />
       </div>
       <div>
         <div className="mb-2 block">
           <Label htmlFor="phone" value="Telefono" />
         </div>
-        <TextInput id="phone" required shadow type="tel" name="phone" />
+        <TextInput
+          id="phone"
+          required
+          shadow
+          type="tel"
+          name="phone"
+          color="info"
+        />
       </div>
 
       <div className="mb-4">
@@ -53,6 +75,7 @@ export default function FormContacts() {
           required
           onChange={(e) => setRequestType(e.target.value)}
           value={requestType}
+          color="info"
         >
           <option value="generic">Richiesta generica</option>
           <option value="airport">Transfer aeroport/hotel</option>
@@ -60,23 +83,25 @@ export default function FormContacts() {
         </Select>
       </div>
 
-
-{/* fileds for airport trasnfers request */}
-      {requestType === "airport" && 
-        <FormAirport />
-      }
+      {/* fileds for airport transfers request */}
+      {requestType === "airport" && <FormAirport />}
 
       {/* fields for other destinations requests */}
 
-      {requestType === "other" &&
-<FormOther />
-      }
+      {requestType === "other" && <FormOther />}
 
       <div>
         <div className="mb-2 block">
           <Label htmlFor="message" value="Messaggio" />
         </div>
-        <Textarea id="message" required shadow rows={4} name="message" />
+        <Textarea
+          id="message"
+          required
+          shadow
+          rows={4}
+          name="message"
+          color="info"
+        />
       </div>
     </>
   );

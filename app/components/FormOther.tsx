@@ -1,26 +1,29 @@
 import { useState } from "react";
 
-import { Button, Label, Select, TextInput, Textarea } from "flowbite-react";
-import FormLayout from "./FormLayout";
+import { Label, Select, TextInput } from "flowbite-react";
 
 export default function ShadowInputs() {
   const [formChoice, setFormChoice] = useState("");
   return (
     <>
       {/* Passeggengers */}
-      <div className="mb-2 block">
-        <Label htmlFor="passengers" value="Numero passeggeri" />
-      </div>
-      <TextInput
-        id="passengers"
-        name="passengers"
-        required
-        shadow
-        type="number"
-        min="1"
-        max="20"
-      />
       <div className="md:grid md:grid-cols-2 md:gap-6">
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="passengers" value="Numero passeggeri" />
+          </div>
+          <TextInput
+            id="passengers"
+            name="passengers"
+            required
+            shadow
+            type="number"
+            min="1"
+            max="20"
+            color="info"
+          />
+        </div>
+
         <div>
           <div className="mb-2 block">
             <Label htmlFor="date" value="Data" />
@@ -32,6 +35,7 @@ export default function ShadowInputs() {
             shadow
             type="date"
             min={new Date().toLocaleDateString("fr-ca")}
+            color="info"
           />
         </div>
       </div>
@@ -45,6 +49,7 @@ export default function ShadowInputs() {
           required
           onChange={(e) => setFormChoice(e.target.value)}
           className="mb-2 block"
+          color="info"
         >
           <option value=""></option>
           <option value="aeroporto">Aeroporto</option>
@@ -54,7 +59,7 @@ export default function ShadowInputs() {
       </div>
       <div className={formChoice === "aeroporto" ? `block` : `hidden`}>
         <Label htmlFor="airport" value="Aeroporto" className=" block mb-2" />
-        <Select id="airport" required name="airport">
+        <Select id="airport" required name="airport" color="info">
           <option value="gatwick">Gatwick</option>
           <option value="heathrow">Heathrow</option>
           <option value="stansted">Stansted</option>
@@ -69,18 +74,16 @@ export default function ShadowInputs() {
             value="Indirizzo hotel"
             className="block mb-2"
           />
-          <TextInput id="address" required shadow type="text" name="address" />
+          <TextInput
+            id="address"
+            required
+            shadow
+            type="text"
+            name="address"
+            color="info"
+          />
         </>
       )}
-      {/* <div className={formChoice === "hotel" ? `block` : `hidden`}>
-        <Label
-          htmlFor="address"
-          value="Indirizzo hotel"
-          className="block mb-2"
-        />
-
-        <TextInput id="address" required shadow type="text" name="address"/>
-      </div> */}
 
       {formChoice === "stazione" && (
         <>
@@ -90,14 +93,28 @@ export default function ShadowInputs() {
             className="block mb-2"
           />
 
-          <TextInput id="address" required shadow type="text" name="address" />
+          <TextInput
+            id="address"
+            required
+            shadow
+            type="text"
+            name="address"
+            color="info"
+          />
         </>
       )}
       <div>
         <div className="mb-2 block">
           <Label htmlFor="destination" value="Luogo di destinazione" />
         </div>
-        <TextInput id="destination" required shadow type="text" name="place" />
+        <TextInput
+          id="destination"
+          required
+          shadow
+          type="text"
+          name="place"
+          color="info"
+        />
       </div>
     </>
   );
