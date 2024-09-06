@@ -9,7 +9,7 @@ export default function FooterWithSocialMediaIcons() {
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div className="py-4">
-            <Logo fillColor="white"/>
+            <Logo fillColor="rgb(107 114 128)" />
           </div>
           <div className="grid grid-cols-3 gap-6 sm:mt-4 sm:gap-10">
             <div>

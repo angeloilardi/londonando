@@ -32,6 +32,7 @@ export async function submitForm( formData: FormData) {
             method: "POST",
             body: formData
         });
+      console.log(formData);
 
       if (!response.ok) {
         return {message: "An error has occured"}

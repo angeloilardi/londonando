@@ -6,35 +6,42 @@ import FormLayout from "./FormLayout";
 export default function ShadowInputs() {
   const [formChoice, setFormChoice] = useState("");
   return (
-      <><div>
+    <>
+      {/* Passeggengers */}
       <div className="mb-2 block">
         <Label htmlFor="passengers" value="Numero passeggeri" />
       </div>
       <TextInput
         id="passengers"
+        name="passengers"
         required
         shadow
         type="number"
         min="1"
-        max="20" />
-    </div><div className="md:grid md:grid-cols-2 md:gap-6">
+        max="20"
+      />
+      <div className="md:grid md:grid-cols-2 md:gap-6">
         <div>
           <div className="mb-2 block">
             <Label htmlFor="date" value="Data" />
           </div>
           <TextInput
             id="date"
+            name="date"
             required
             shadow
             type="date"
-            min={new Date().toLocaleDateString("fr-ca")} />
+            min={new Date().toLocaleDateString("fr-ca")}
+          />
         </div>
-      </div><div>
+      </div>
+      <div>
         <div className="mb-2 block">
           <Label htmlFor="start" value="Luogo di partenza" />
         </div>
         <Select
           id="start"
+          name="choice"
           required
           onChange={(e) => setFormChoice(e.target.value)}
           className="mb-2 block"
@@ -44,34 +51,54 @@ export default function ShadowInputs() {
           <option value="hotel">Hotel</option>
           <option value="stazione">Stazione</option>
         </Select>
-      </div><div className={formChoice === "aeroporto" ? `block` : `hidden`}>
+      </div>
+      <div className={formChoice === "aeroporto" ? `block` : `hidden`}>
         <Label htmlFor="airport" value="Aeroporto" className=" block mb-2" />
-        <Select id="airport" required>
-          <option>Gatwick</option>
-          <option>Heathrow</option>
-          <option>Stansted</option>
-          <option>Luton</option>
-          <option>London City</option>
+        <Select id="airport" required name="airport">
+          <option value="gatwick">Gatwick</option>
+          <option value="heathrow">Heathrow</option>
+          <option value="stansted">Stansted</option>
+          <option value="luton">Luton</option>
+          <option value="london-city">London City</option>
         </Select>
       </div>
-      <div className={formChoice === "hotel" ? `block` : `hidden`}>
+      {formChoice === "hotel" && (
+        <>
+          <Label
+            htmlFor="address"
+            value="Indirizzo hotel"
+            className="block mb-2"
+          />
+          <TextInput id="address" required shadow type="text" name="address" />
+        </>
+      )}
+      {/* <div className={formChoice === "hotel" ? `block` : `hidden`}>
         <Label
           htmlFor="address"
           value="Indirizzo hotel"
-          className="block mb-2" />
+          className="block mb-2"
+        />
 
-        <TextInput id="address" required shadow type="text" />
-      </div><div className={formChoice === "stazione" ? `mb-2 block` : `hidden`}>
-        <Label htmlFor="address" value="Nome stazione" className="block mb-2" />
+        <TextInput id="address" required shadow type="text" name="address"/>
+      </div> */}
 
-        <TextInput id="address" required shadow type="text" />
-      </div>
+      {formChoice === "stazione" && (
+        <>
+          <Label
+            htmlFor="address"
+            value="Nome stazione"
+            className="block mb-2"
+          />
+
+          <TextInput id="address" required shadow type="text" name="address" />
+        </>
+      )}
       <div>
         <div className="mb-2 block">
           <Label htmlFor="destination" value="Luogo di destinazione" />
         </div>
-        <TextInput id="destination" required shadow type="text" />
+        <TextInput id="destination" required shadow type="text" name="place" />
       </div>
-      </>
+    </>
   );
 }
