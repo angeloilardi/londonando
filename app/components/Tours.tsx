@@ -50,10 +50,10 @@ export default async function Tours() {
   const tours = await getTours();
   return (
     <div
-      className="w-full px-5 mx-auto bg-accent-light dark:bg-gray-600 snap-start min-h-screen flex flex-col justify-center gap-6"
+      className="w-full px-5 mx-auto bg-primary-light dark:bg-gray-600 snap-start min-h-screen flex flex-col justify-center gap-6"
       id="tours"
     >
-      <h1 className="text-3xl font-bold md:mt-12 text-center text-primary dark:text-white mobile-landscape:mt-2">
+      <h1 className="text-3xl font-bold md:mt-12 text-center text-accent dark:text-white mobile-landscape:mt-2">
         SCOPRI TUTTI I TOUR
       </h1>
       <div className="flex gap-4 relative overflow-scroll snap-x snap-mandatory">
@@ -78,10 +78,10 @@ export default async function Tours() {
                 },
               }}
             >
-              <h5 className="text-2xl font-bold tracking-tight text-primary dark:text-white mobile-landscape:text-sm overflow-hidden">
+              <h5 className="text-2xl font-bold tracking-tight text-accent dark:text-white mobile-landscape:text-sm overflow-hidden">
                 {tour.title}{" "}
               </h5>
-              <p className="font-normal text-primary-light dark:text-gray-100 mt-3 mobile-landscape:hidden">
+              <p className="font-normal text-accent-light dark:text-gray-100 mt-3 mobile-landscape:hidden">
                 {tour.subtitle}{" "}
               </p>
             </Card>

@@ -6,23 +6,13 @@ import { Modal, Flowbite } from "flowbite-react";
 import { submitForm } from "@/app/actions";
 import { useRef, useState } from "react";
 import type { CustomFlowbiteTheme } from "flowbite-react";
-import { root } from "postcss";
 
 
 const customTheme: CustomFlowbiteTheme = {
   label: {
     root: {
       colors: {
-        default: "text-primary",
-      },
-    },
-  },
-  textInput: {
-    field: {
-      input: {
-        colors: {
-          info: "focus:border-accent focus:ring-accent border-primary-light",
-        },
+        default: "text-accent dark:text-white",
       },
     },
   },
@@ -30,14 +20,14 @@ const customTheme: CustomFlowbiteTheme = {
     field: {
       select: {
         colors: {
-          info: "focus:border-accent focus:ring-accent border-primary-light",
+          info: "focus:border-accent focus:ring-accent border-primary-light dark:text-gray-700 text-accent",
         },
       },
     },
   },
   textarea: {
     colors: {
-      info: "focus:border-accent focus:ring-accent border-primary-light",
+      info: "focus:border-accent focus:ring-accent border-primary-light dark:text-gray-700",
     },
   },
 };
@@ -72,7 +62,7 @@ export default function FormServices({
         </Modal.Body>
       </Modal>
 
-      <Flowbite theme={{ theme: customTheme }}>
+      <Flowbite >
         <form
           ref={ref}
           className="flex w-[90%] flex-col gap-4 justify-center mx-auto max-w-2xl py-3 text-primary"

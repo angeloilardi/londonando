@@ -15,9 +15,9 @@ export default function FooterWithSocialMediaIcons() {
             <div>
               <Footer.Title title="about" className="!mb-2" />
               <Footer.LinkGroup col className="!space-y-1">
-                <Footer.Link href="/tours">Tour</Footer.Link>
-                <Footer.Link href="/servizi">Servizi</Footer.Link>
-                <Footer.Link href="/aboutme">Chi sono</Footer.Link>
+                <Footer.Link href="/#tours">Tour</Footer.Link>
+                <Footer.Link href="/#servizi">Servizi</Footer.Link>
+                <Footer.Link href="/#aboutme">Chi sono</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
@@ -45,7 +45,7 @@ export default function FooterWithSocialMediaIcons() {
             <div>
               <Footer.Title title="Legal" className="!mb-2" />
               <Footer.LinkGroup col className="!space-y-1">
-                <Footer.Link href="#">Privacy Policy</Footer.Link>
+                <Footer.Link href="privacy">Privacy Policy</Footer.Link>
                 <Footer.Link href="#">Terms & Conditions</Footer.Link>
               </Footer.LinkGroup>
             </div>

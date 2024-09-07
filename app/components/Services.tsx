@@ -59,12 +59,12 @@ export default async function Services() {
   return (
     <div
       id="servizi"
-      className="bg-[url(https://images.unsplash.com/photo-1530458738063-22ed42fa27c9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center items-center min-h-screen justify-center py-10 snap-start overflow-auto"
+      className="bg-[url(https://images.unsplash.com/photo-1530458738063-22ed42fa27c9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center items-center min-h-screen justify-center py-10 snap-start overflow-auto flex flex-col flex-1"
     >
       <h3 className="text-center text-3xl text-white">SERVIZI</h3>
       <Accordion
         collapseAll
-        className="bg-primary grow-0 max-w-[80%] my-6 md:w-[60%] hover:text-primary dark:bg-gray-900 opacity-90 mx-auto"
+        className="bg-primary grow-0 max-w-[80%] my-6 md:w-[60%] hover:text-primary dark:bg-gray-900 opacity-90"
       >
         {services.map((service: Service) => {
           return (
@@ -72,14 +72,14 @@ export default async function Services() {
               <AccordionTitle
                 theme={{
                   open: {
-                    off: "text-white hover:text-primary dark:hover:text-white",
-                    on: "hover:text-primary text-white dark:hover:text-white dark:text-white",
+                    off: "text-accent hover:text-accent-light dark:hover:text-white",
+                    on: "hover:text-accent-light text-accent dark:hover:text-white dark:text-white",
                   },
                 }}
               >
                 {service.title}
               </AccordionTitle>
-              <AccordionContent className="text-white">
+              <AccordionContent className="text-accent">
                 <RichText
                   content={service.description?.json}
                   renderers={{

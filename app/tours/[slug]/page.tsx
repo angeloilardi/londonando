@@ -55,18 +55,18 @@ async function getTour(slug: string) {
 export default  async function Tour({ params }: { params: { slug: string } }) {
   const tourData = await getTour(params.slug);
   return (
-    <main className="prose w-full py-10 px-5 mx-auto bg-off-white snap-start">
+    <div className="prose w-full py-10 px-5 mx-auto bg-off-white snap-start dark:bg-gray-600">
       <Link href="/#tours">
         <p className="text-xs">
           <BiArrowBack className="inline-block mr-2" />
           Torna indietro
         </p>
       </Link>
-      <h1 className="text-3xl font-bold mb-5 text-center mt-12 text-accent">
+      <h1 className="text-3xl font-bold mb-5 text-center text-accent dark:text-white">
         {tourData.title}
       </h1>
-      <div className="w-90 max-w-xl my-16 mx-auto aspect-[3/2]">
-        <Carousel >
+      <div className="w-90 max-w-xl my-16 mobile-landscape:my-4 mx-auto aspect-[3/2] mobile-landscape:max-h-[200px]">
+        <Carousel>
           {tourData.pictures.length !== 0 ? (
             tourData.pictures.map(
               (picture: { url: string; alt: string; id: string }) => {
@@ -99,7 +99,7 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             content={tourData?.content?.json}
             renderers={{
               p: ({ children }) => (
-                <p className="mb-5 text-primary-light dark:text-indigo-50">
+                <p className="mb-5 text-accent/60 dark:text-indigo-50">
                   {children}
                 </p>
               ),
@@ -127,7 +127,7 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
           <FormSubmitButton />
         </form>
       </div>
-    </main>
+    </div>
   );
 }
 

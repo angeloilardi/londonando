@@ -22,12 +22,13 @@ module.exports = {
     //   'off-white': '#f3f4f7'
     // }
     colors: {
-      'primary': '#1976D2',
-      'primary-light': '#64B5F6',
-      'accent': '#F28722',
-      'accent-light': '#FFD7C4',
+      'primary': '#f3f4f6',
+      'primary-light': '#e5e7eb',
+      'accent': '#404040',
+      'accent-light': '#a3a3a3',
       'off-white': '#f3f4f7',
-      'info': '#'
+      'background-light': '#f3f4f7',
+      'background-lighter': '#f9fafb'
     },
     screens: {
       'sm': '640px',
