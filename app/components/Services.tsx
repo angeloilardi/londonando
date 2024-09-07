@@ -79,7 +79,7 @@ export default async function Services() {
               >
                 {service.title}
               </AccordionTitle>
-              <AccordionContent className="text-accent">
+              <AccordionContent className="text-accent dark:text-primary">
                 <RichText
                   content={service.description?.json}
                   renderers={{
@@ -92,9 +92,9 @@ export default async function Services() {
                   }}
                 />
                 {service.title.includes("AEROPORTO") ? (
-                  <ButtonInfo url={"/servizi/airport"} />
+                  <ButtonInfo url={"#contacts"} />
                 ) : service.title.includes("ALTRE") ? (
-                  <ButtonInfo url={"/servizi/escursioni"} />
+                  <ButtonInfo url={"#contacts"} />
                 ) : (
                   ""
                 )}
