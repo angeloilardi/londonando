@@ -12,16 +12,7 @@ export default function FormContacts() {
         <div className="mb-2 block">
           <Label htmlFor="name" value="Nome e Cognome" />
         </div>
-        <TextInput
-          id="name"
-          required
-          shadow
-          type="text"
-          name="name"
-          className="invalid:border-red-700"
-          formNoValidate
-        />
-        <p className="hidden">error</p>
+        <TextInput id="name" required shadow type="text" name="name" />
       </div>
       <div>
         <div className="mb-2 block">
