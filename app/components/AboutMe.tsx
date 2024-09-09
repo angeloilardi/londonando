@@ -15,11 +15,11 @@ export default function AboutMe() {
           height={300}
           className="flex-1 aspect-auto w-full object-cover"
         /> */}
-        <div className="flex flex-col flex-1 max-h-screen border-8 border-background-light gap-2">
+        <div className="flex flex-col flex-1 max-h-screen border-8 border-background-light gap-2 overflow-hidden">
           <img
             src="/images/c80194bd-0d7f-4fe8-acc4-bdbce2409148.jpeg"
             alt=""
-            className="h-[33.3%] object-covert"
+            className="h-[33.3%] object-cover"
           />
           <img
             src="/images/IMG_1733.jpeg"
@@ -29,7 +29,7 @@ export default function AboutMe() {
           <img
             src="/images/IMG_6351 copy.jpg"
             alt=""
-            className="h-[33.3%] object-cover "
+            className="h-[33.3%] object-cover"
           />
         </div>
         <div className="p-10 flex-1 text-accent dark:text-white">
