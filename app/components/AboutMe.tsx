@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ReviewsWidget from ".//ReviewsWidget"
+import ReviewsWidget from ".//ReviewsWidget";
 
 export default function AboutMe() {
   return (
@@ -21,6 +21,7 @@ export default function AboutMe() {
             alt=""
             className="h-[33.3%] object-cover"
           />
+
           <img
             src="/images/IMG_1733.jpeg"
             alt=""
@@ -32,7 +33,8 @@ export default function AboutMe() {
             className="h-[33.3%] object-cover"
           />
         </div>
-        <div className="p-10 flex-1 text-accent dark:text-white">
+        <div className="p-6 flex-1 text-accent dark:text-white leading-snug">
+          <h3 className="text-center text-3xl text-accent py-6 ">CHI SONO</h3>
           <p>
             Per chiunque avesse voglia di rimanere incantato da tutte le
             meravigliose bellezze che fanno di Londra una delle capitali
