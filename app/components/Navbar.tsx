@@ -60,10 +60,10 @@ export default function NavbarWithCTAButton() {
               theme={customTheme}
               key={link.route}
               href={`/#${link.route}`}
-              className="text-lg rounded-lg"
+              className="rounded-lg"
               active={currentRoute.includes(`/${link.route}`) ? true : false}
             >
-              {link.name}
+              {link.name.toUpperCase()}
             </NavbarLink>
           );
         })}

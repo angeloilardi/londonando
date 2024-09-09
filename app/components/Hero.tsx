@@ -30,7 +30,7 @@ export default function Hero() {
             </h2>
           </Slide>
           <Link href="/#tours">
-            <AttentionSeeker effect="heartBeat" delay={1000}>
+            <AttentionSeeker effect="heartBeat" delay={1000} duration={2000}>
               <button className="outline-white p-3 rounded-md outline mt-5 text-xl">
                 Scopri i tour
               </button>

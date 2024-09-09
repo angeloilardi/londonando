@@ -7,6 +7,9 @@ export default function Contacts() {
       className="bg-background-light dark:bg-gray-600 snap-start"
       id="contacts"
     >
+      <h3 className="text-center text-3xl text-accent mt-24">
+        CONTATTI
+      </h3>
       <FormLayout>
         <p className="my-6 dark:text-white text-accent">
           Per qualsiasi domanda o chiarimento relativo alle diverse passeggiate

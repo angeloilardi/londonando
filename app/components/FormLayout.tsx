@@ -5,31 +5,7 @@ import { Modal, Flowbite } from "flowbite-react";
 import { FaCheckCircle } from "react-icons/fa";
 import { submitForm } from "@/app/actions";
 import { useRef, useState } from "react";
-import type { CustomFlowbiteTheme } from "flowbite-react";
 
-// const customTheme: CustomFlowbiteTheme = {
-//   label: {
-//     root: {
-//       colors: {
-//         default: "text-accent dark:text-white",
-//       },
-//     },
-//   },
-//   select: {
-//     field: {
-//       select: {
-//         colors: {
-//           info: "focus:border-accent focus:ring-accent border-primary-light dark:text-gray-700 text-accent",
-//         },
-//       },
-//     },
-//   },
-//   textarea: {
-//     colors: {
-//       info: "focus:border-accent focus:ring-accent border-primary-light dark:text-gray-700",
-//     },
-//   },
-// };
 
 export default function FormServices({
   children,
