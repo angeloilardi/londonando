@@ -1,12 +1,11 @@
-'use client'
+"use client";
 
 import FormSubmitButton from "@/app/components/FormSubmitButton";
 import { Modal, Flowbite } from "flowbite-react";
-  import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 import { submitForm } from "@/app/actions";
 import { useRef, useState } from "react";
 import type { CustomFlowbiteTheme } from "flowbite-react";
-
 
 // const customTheme: CustomFlowbiteTheme = {
 //   label: {
@@ -36,7 +35,7 @@ export default function FormServices({
   children,
 }: {
   children: React.ReactNode;
-  }) {
+}) {
   const [openModal, setOpenModal] = useState(false);
   const ref = useRef<HTMLFormElement>(null);
 
@@ -59,7 +58,7 @@ export default function FormServices({
         </Modal.Body>
       </Modal>
 
-      <Flowbite >
+      <Flowbite>
         <form
           ref={ref}
           className="flex w-[90%] flex-col gap-4 justify-center mx-auto max-w-2xl py-3"

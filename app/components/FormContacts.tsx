@@ -54,7 +54,7 @@ export default function FormContacts() {
         </Select>
       </div>
 
-      {/* fileds for airport transfers request */}
+      {/* fields for airport transfers request */}
       {requestType === "airport" && <FormAirport />}
 
       {/* fields for other destinations requests */}
