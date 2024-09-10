@@ -25,7 +25,7 @@ export default function Hero() {
             <h1 className="text-5xl lg:text-7xl">LONDONANDO</h1>
           </Slide>
           <Slide direction="left">
-            <h2 className="italic mt-5 text-3xl">
+            <h2 className="italic mt-5 text-3xl uppercase">
               Tour e visite di Londra e dintorni in Italiano!
             </h2>
           </Slide>

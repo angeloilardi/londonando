@@ -15,7 +15,7 @@ export default function AboutMe() {
           height={300}
           className="flex-1 aspect-auto w-full object-cover"
         /> */}
-        <div className="flex flex-col flex-1 max-h-screen border-8 border-background-light gap-2 overflow-hidden">
+        <div className="flex flex-col flex-1 max-h-screen border-8 border-background-light gap-2 overflow-hidden dark:bg-background-light">
           <img
             src="/images/c80194bd-0d7f-4fe8-acc4-bdbce2409148.jpeg"
             alt=""
@@ -34,7 +34,7 @@ export default function AboutMe() {
           />
         </div>
         <div className="p-6 flex-1 text-accent dark:text-white leading-snug">
-          <h3 className="text-center text-3xl text-accent py-6 ">CHI SONO</h3>
+          <h3 className="text-center text-3xl py-6 ">CHI SONO</h3>
           <p>
             Per chiunque avesse voglia di rimanere incantato da tutte le
             meravigliose bellezze che fanno di Londra una delle capitali
