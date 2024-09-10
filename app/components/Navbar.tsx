@@ -43,10 +43,7 @@ export default function NavbarWithCTAButton() {
       className="bg-primary z-30 top-0 left-0 w-full justify-end sticky"
     >
       <NavbarBrand href="/">
-        {/* <span className="self-center whitespace-nowrap text-xl font-semibold text-white"> */}
-        <Logo fillColor="#404040" />
-        {/* <Image src='/logo.svg' width={200} height={200} quality={200} alt=''></Image> */}
-        {/* </span> */}
+        <Logo fillColor="#404040"/>
       </NavbarBrand>
       <div className="flex md:order-2">
         <NavbarToggle className="text-accent-light" />
