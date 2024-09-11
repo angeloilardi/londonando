@@ -23,6 +23,10 @@ const navLinks = [
     route: "aboutme",
   },
   {
+    name: "Recensioni",
+    route: "recensioni",
+  },
+  {
     name: "Contatti",
     route: "contacts",
   },
@@ -46,7 +50,7 @@ export default function NavbarWithCTAButton() {
         <Logo fillColor="#404040"/>
       </NavbarBrand>
       <div className="flex md:order-2">
-        <NavbarToggle className="text-accent-light" />
+        <NavbarToggle className="text-accent-light dark:text-primary" />
       </div>
       <NavbarCollapse className="ml-auto p-3 z-30 text-accent-light">
         {navLinks.map((link) => {

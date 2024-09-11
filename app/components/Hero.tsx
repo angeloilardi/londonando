@@ -25,13 +25,13 @@ export default function Hero() {
             <h1 className="text-5xl lg:text-7xl">LONDONANDO</h1>
           </Slide>
           <Slide direction="left">
-            <h2 className="italic mt-5 text-3xl uppercase">
+            <h2 className="italic mt-5 text-xl uppercase">
               Tour e visite di Londra e dintorni in Italiano!
             </h2>
           </Slide>
           <Link href="/#tours">
             <AttentionSeeker effect="heartBeat" delay={1000} duration={2000}>
-              <button className="outline-white p-3 rounded-md outline mt-5 text-xl">
+              <button className="outline-white p-3 rounded-md outline mt-5 text-xl uppercase">
                 Scopri i tour
               </button>
             </AttentionSeeker>

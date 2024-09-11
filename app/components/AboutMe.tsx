@@ -15,7 +15,7 @@ export default function AboutMe() {
           height={300}
           className="flex-1 aspect-auto w-full object-cover"
         /> */}
-        <div className="flex flex-col flex-1 max-h-screen border-8 border-background-light gap-2 overflow-hidden dark:bg-background-light">
+        <div className="flex flex-col flex-1 max-h-screen border-8 border-transparent gap-2 overflow-hidden ">
           <img
             src="/images/c80194bd-0d7f-4fe8-acc4-bdbce2409148.jpeg"
             alt=""
