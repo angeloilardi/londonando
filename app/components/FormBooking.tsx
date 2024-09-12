@@ -1,16 +1,14 @@
+
 import { Label, TextInput, Textarea } from "flowbite-react";
 import FormLayout from "./FormLayout";
-import { useSearchParams } from "next/navigation";
 
 
 export default function FormBooking() {
-  const searchParams = useSearchParams();
-  const tour = searchParams.get("tour")
   return (
     <>
       <FormLayout>
         {/* Date and number of kids */}
-        <input type="text" value={tour ? tour : undefined} name="tour" hidden/>
+        {/* <input type="text" hidden name="tour"  value={tour}/> */}
         <div className="md:grid-cols-2 md:grid md:gap-6">
           {/* Date */}
           <div className="mb-4 md:mb-0">
