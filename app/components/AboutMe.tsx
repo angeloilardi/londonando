@@ -33,7 +33,7 @@ export default function AboutMe() {
             className="h-[33.3%] object-cover"
           />
         </div>
-        <div className="p-6 flex-1 text-accent dark:text-white leading-snug">
+        <div className="p-6 flex-1 text-accent dark:text-white leading-[1.42]">
           <h3 className="text-center text-3xl py-6 ">CHI SONO</h3>
           <p>
             Per chiunque avesse voglia di rimanere incantato da tutte le
