@@ -18,6 +18,7 @@ export default function FooterWithSocialMediaIcons() {
                 <Footer.Link href="/#tours">Tour</Footer.Link>
                 <Footer.Link href="/#servizi">Servizi</Footer.Link>
                 <Footer.Link href="/#aboutme">Chi sono</Footer.Link>
+                <Footer.Link href="/#recensioni">Recensioni</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>

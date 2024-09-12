@@ -20,7 +20,6 @@ export default async function PrivacyPolicy() {
       }),
     });
     const data = await res.json();
-console.log(data.data.doc)
     return data.data.doc;
   }
 
@@ -31,18 +30,15 @@ console.log(data.data.doc)
           content={PrivacyPolicy?.content?.json}
           renderers={{
             p: ({ children }) => (
-              <p className="mb-5 text-accent/60 dark:text-indigo-50">
-                {children}
-              </p>
+              <p className="mb-5 text-accent dark:text-indigo-50">{children}</p>
             ),
             h1: ({ children }) => <h1 className="text-3xl">{children}</h1>,
             li: ({ children }) => (
-              <li className="list-disc">{children}</li>
+              <li className="list-disc ext-accent dark:text-indigo-50">
+                {children}
+              </li>
             ),
-            ul: ({ children }) => (
-              <ul className="py-3">{children}</ul>
-            ),
-            
+            ul: ({ children }) => <ul className="py-3">{children}</ul>,
           }}
         />
       </div>

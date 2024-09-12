@@ -2,7 +2,7 @@ import Script from "next/script";
 
 export default function AboutMe() {
   return (
-      <div id="recensioni" className="h-screen">
+      <div id="recensioni">
         <Script
           src="https://static.elfsight.com/platform/platform.js"
           data-use-service-core
