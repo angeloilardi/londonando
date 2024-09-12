@@ -62,7 +62,7 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
           Torna indietro
         </p>
       </Link>
-      <h1 className="text-3xl font-bold mb-5 text-center text-accent dark:text-white">
+      <h1 className="text-3xl mb-5 text-center text-accent dark:text-white">
         {tourData.title}
       </h1>
       <div className="w-90 max-w-xl my-16 mobile-landscape:my-4 mx-auto aspect-[3/2] mobile-landscape:max-h-[200px]">
@@ -99,7 +99,7 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             content={tourData?.content?.json}
             renderers={{
               p: ({ children }) => (
-                <p className="mb-5 text-accent/60 dark:text-indigo-50">
+                <p className="mb-5 text-accent dark:text-indigo-50">
                   {children}
                 </p>
               ),

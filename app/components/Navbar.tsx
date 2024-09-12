@@ -35,7 +35,7 @@ const navLinks = [
 const customTheme = {
   active: {
     on: "text-accent underline dark:text-white md:bg-transparent md:text-cyan-700",
-    off: "hover:bg-accent dark:border-gray-700 dark:text-gray-400 hover:text-primary dark:hover:bg-gray-700 dark:hover:text-white  md:hover:bg-transparent md:hover:text-cyan-700 md:hover:text-accent md:dark:hover:bg-transparent md:dark:hover:text-white",
+    off: "text-accent hover:bg-accent dark:border-gray-700 dark:text-gray-400 hover:text-accent-light dark:hover:bg-gray-700 dark:hover:text-white  md:hover:bg-transparent md:dark:hover:bg-transparent md:dark:hover:text-white",
   },
 };
 
