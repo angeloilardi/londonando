@@ -55,9 +55,9 @@ async function getTour(slug: string) {
 export default  async function Tour({ params }: { params: { slug: string } }) {
   const tourData = await getTour(params.slug);
   return (
-    <div className="prose w-full py-10 px-5 mx-auto bg-off-white snap-start dark:bg-gray-600">
+    <div className="prose w-full py-6 px-5 mx-auto bg-off-white snap-start dark:bg-gray-600">
       <Link href="/#tours">
-        <p className="text-xs">
+        <p className="text-xs p-3">
           <BiArrowBack className="inline-block mr-2" />
           Torna indietro
         </p>
@@ -65,13 +65,13 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
       <h1 className="text-3xl mb-5 text-center text-accent dark:text-white">
         {tourData.title}
       </h1>
-      <div className="w-90 max-w-xl my-16 mobile-landscape:my-4 mx-auto aspect-[3/2] mobile-landscape:max-h-[200px]">
+      <div className="w-90 max-w-xl my-16 mobile-landscape:my-4 mx-auto aspect-[3/2] mobile-landscape:h-[200px] mobile-landscape:w-auto">
         <Carousel>
           {tourData.pictures.length !== 0 ? (
             tourData.pictures.map(
               (picture: { url: string; alt: string; id: string }) => {
                 return (
-                  <img
+                  <Image
                     key={picture.id}
                     src={picture.url}
                     alt={picture.alt}
