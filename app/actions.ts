@@ -16,11 +16,8 @@ import { redirect } from "next/navigation";
 
 
 export async function sendForm(formData: FormData) {
-    console.log(formData);
     const price = formData.get('price') as string;
     const currentRoute = formData.get("current-route");
-    console.log(price);
-    console.log(currentRoute);
     redirect(`/booking?tour=${currentRoute}&num=${encodeURI(price)}`)
 
 }

@@ -1,14 +1,21 @@
-
+'use client'
 import { Label, TextInput, Textarea } from "flowbite-react";
 import FormLayout from "./FormLayout";
 
+import { useSearchParams } from "next/navigation";
+import { InputHTMLAttributes } from "react";
+
 
 export default function FormBooking() {
+  const searchParams = useSearchParams();
+
+  const tour = searchParams.get("tour");
   return (
     <>
       <FormLayout>
         {/* Date and number of kids */}
-        {/* <input type="text" hidden name="tour"  value={tour}/> */}
+        {tour && <input type="text" hidden name="tour" value={tour} />}
+
         <div className="md:grid-cols-2 md:grid md:gap-6">
           {/* Date */}
           <div className="mb-4 md:mb-0">
@@ -91,7 +98,7 @@ export default function FormBooking() {
         {/* Notes */}
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="password2" value="Note" />
+            <Label htmlFor="notes" value="Note" />
           </div>
           <Textarea id="notes" name="notes" required shadow rows={3} />
         </div>
