@@ -23,7 +23,7 @@ interface Service {
 function ButtonInfo(props: { url: string | UrlObject }) {
   return (
     <Link href={props.url}>
-      <button className="flex items-center gap-3 dark:border-white border-black border p-1 rounded mt-2 ml-auto">
+      <button className="flex items-center gap-3 dark:border-white border-black border p-2 rounded mt-2 ml-auto uppercase">
         Richiedi info
         <BsArrowRightCircleFill />
       </button>

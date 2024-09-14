@@ -17,9 +17,7 @@ export default function Contacts() {
           rispetto al vostro soggiorno a Londra non esitate a contattarci.
           Saremo felici di aiutarvi.
         </p>
-        <div className="md:basis-1/2">
           <FormContacts />
-        </div>
       </FormLayout>
     </div>
   );

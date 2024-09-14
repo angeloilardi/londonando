@@ -20,7 +20,6 @@ export default function ShadowInputs() {
             type="number"
             min="1"
             max="20"
-            color="info"
           />
         </div>
 
@@ -35,7 +34,6 @@ export default function ShadowInputs() {
             shadow
             type="date"
             min={new Date().toLocaleDateString("fr-ca")}
-            color="info"
           />
         </div>
       </div>
@@ -49,7 +47,6 @@ export default function ShadowInputs() {
           required
           onChange={(e) => setFormChoice(e.target.value)}
           className="mb-2 block"
-          color="info"
         >
           <option value=""></option>
           <option value="aeroporto">Aeroporto</option>
@@ -80,7 +77,6 @@ export default function ShadowInputs() {
             shadow
             type="text"
             name="address"
-            color="info"
           />
         </>
       )}
@@ -99,7 +95,6 @@ export default function ShadowInputs() {
             shadow
             type="text"
             name="address"
-            color="info"
           />
         </>
       )}
@@ -113,7 +108,6 @@ export default function ShadowInputs() {
           shadow
           type="text"
           name="place"
-          color="info"
         />
       </div>
     </>
