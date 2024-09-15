@@ -3,7 +3,6 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 export default async function PrivacyPolicy() {
   async function getprivacyPolicy() {
     const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
-      // cache: 'no-store',
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +24,7 @@ export default async function PrivacyPolicy() {
 
   const PrivacyPolicy = await getprivacyPolicy();
     return (
-      <div className="p-10 bg-background-light dark:bg-accent">
+      <div className="p-16 bg-background-light dark:bg-accent">
         <RichText
           content={PrivacyPolicy?.content?.json}
           renderers={{
