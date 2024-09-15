@@ -41,6 +41,7 @@ export default async function Tours() {
      }            
   }`,
       }),
+      next: { revalidate: 60 }
     });
     const json = await response.json();
 
