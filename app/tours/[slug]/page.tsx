@@ -23,7 +23,7 @@ async function getTour(slug: string) {
     headers: {
       "Content-Type": "application/json",
     },
-    next: { revalidate: 3600 },
+    next: { revalidate: 60 },
     body: JSON.stringify({
       query: `
         query MyQuery($slug: String = "slug") {
