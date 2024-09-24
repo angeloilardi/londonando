@@ -19,11 +19,11 @@ import FormSubmitButton from "@/app/components/FormSubmitButton";
 
 async function getTour(slug: string) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
-    // cache: 'no-store',
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
+    next: { revalidate: 3600 },
     body: JSON.stringify({
       query: `
         query MyQuery($slug: String = "slug") {
@@ -45,9 +45,8 @@ async function getTour(slug: string) {
       variables: {
         slug: slug,
       },
-      
     }),
-  }, );
+  });
   const data = await res.json();
   return data.data.page;
 }
