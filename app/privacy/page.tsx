@@ -24,7 +24,7 @@ export default async function PrivacyPolicy() {
 
   const PrivacyPolicy = await getprivacyPolicy();
     return (
-      <div className="p-16 bg-background-light dark:bg-accent">
+      <div className="p-8 md:p-16 bg-background-light dark:bg-accent">
         <RichText
           content={PrivacyPolicy?.content?.json}
           renderers={{

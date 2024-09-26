@@ -11,11 +11,11 @@ import FormSubmitButton from "@/app/components/FormSubmitButton";
 
 
 // custom theme to fix scroll not working on Chrome
-// const customTheme: CustomFlowbiteTheme["carousel"] = {
-//   scrollContainer: {
-//     base: "flex h-full !overflow-x-scroll snap-mandatory overflow-x-scroll scroll-smooth rounded-lg !overflow-y-hidden",
-//   },
-// };
+const customTheme: CustomFlowbiteTheme["carousel"] = {
+  scrollContainer: {
+    base: "flex h-full !overflow-x-scroll snap-mandatory overflow-x-scroll scroll-smooth rounded-lg !overflow-y-hidden",
+  },
+};
 
 async function getTour(slug: string) {
   const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
@@ -65,7 +65,7 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
         {tourData.title}
       </h1>
       <div className="w-90 max-w-xl my-16 mobile-landscape:my-4 mx-auto aspect-[3/2] mobile-landscape:h-[200px] mobile-landscape:w-auto">
-        <Carousel>
+        <Carousel theme={customTheme}>
           {tourData.pictures.length !== 0 ? (
             tourData.pictures.map(
               (picture: { url: string; alt: string; id: string }) => {
