@@ -104,8 +104,8 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             }}
           />
         )}
-        <FormBooking />
       </div>
+      <FormBooking />
     </div>
   );
 }
