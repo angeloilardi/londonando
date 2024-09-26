@@ -32,7 +32,7 @@ export default function FormBooking() {
             {/* Number of adults */}
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="kids" value="Numero di partecipanti adulti" />
+                <Label htmlFor="kids" value="Numero di partecipanti adulti (16+)" />
               </div>
               <TextInput
                 id="kids"
