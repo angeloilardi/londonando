@@ -1,13 +1,12 @@
 
 
-import { Select, type CustomFlowbiteTheme } from "flowbite-react";
+import { type CustomFlowbiteTheme } from "flowbite-react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
 import { Carousel } from "flowbite-react";
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
-import { sendForm } from "@/app/actions";
-import FormSubmitButton from "@/app/components/FormSubmitButton";
+import FormBooking from "@/app/components/FormBooking";
 
 
 // custom theme to fix scroll not working on Chrome
@@ -105,26 +104,7 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
             }}
           />
         )}
-        <form action={sendForm} className="flex flex-col md:flex-row md:items-center md:gap-3">
-          <Select name='price' id="price" required className="basis-3/4 grow">
-            <option value="">Seleziona il numero di partecipanti</option>
-            {tourData.price &&
-              tourData.price.map((option: string, i: number) => {
-                return (
-                  <option key={i} value={option}>
-                    {option}
-                  </option>
-                );
-              })}
-          </Select>
-          <input
-            type="text"
-            hidden
-            defaultValue={tourData.title}
-            name="current-route"
-          />
-          <FormSubmitButton />
-        </form>
+        <FormBooking />
       </div>
     </div>
   );
