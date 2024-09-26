@@ -37,7 +37,7 @@ export default function FormServices({
       <Flowbite>
         <form
           ref={ref}
-          className="flex w-[90%] flex-col gap-4 justify-center mx-auto max-w-2xl py-3"
+          className="flex flex-col gap-4 justify-center mx-auto max-w-3xl py-3"
           // action="https://api.web3forms.com/submit"
           // method="POST"
           action={async (formData) => {
