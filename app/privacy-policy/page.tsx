@@ -4,6 +4,7 @@ export default async function PrivacyPolicy() {
   async function getprivacyPolicy() {
     const res = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!, {
       method: "POST",
+      next: {revalidate: 60},
       headers: {
         "Content-Type": "application/json",
       },
