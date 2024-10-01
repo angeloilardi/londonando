@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
 
-const alata = Rubik({ subsets: ["latin"]});
+const rubik = Rubik({ subsets: ["latin"]});
 
 export const metadata = {
   title: 'Londonando',
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${alata.className}`}>
+    <html lang="en" className={`${rubik.className}`}>
       <meta charSet="utf-8"></meta>
       <body className="overflow-x-hidden relative h-screen flex flex-col">
         <Navbar />
