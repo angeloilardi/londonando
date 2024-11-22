@@ -54,7 +54,7 @@ next: { revalidate: 60 }
       className="w-full px-5 mx-auto bg-primary-light dark:bg-gray-600 snap-start min-h-screen flex flex-col justify-center gap-6"
       id="tours"
     >
-      <h1 className="text-3xl md:mt-12 text-center text-accent dark:text-white mobile-landscape:mt-2">
+      <h1 className="text-3xl md:py-16 text-center text-accent dark:text-white mobile-landscape:mt-2">
         SCOPRI TUTTI I TOUR
       </h1>
       <div className="flex gap-4 relative overflow-scroll snap-x snap-mandatory">

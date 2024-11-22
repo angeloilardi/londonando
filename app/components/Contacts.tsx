@@ -7,7 +7,7 @@ export default function Contacts() {
       className="bg-background-light px-5 dark:bg-gray-600 snap-start"
       id="contacts"
     >
-      <h3 className="text-center text-3xl mt-24">
+      <h3 className="text-center text-3xl pt-16">
         CONTATTI
       </h3>
       <FormLayout>
