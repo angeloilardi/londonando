@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import {
   Navbar,
   NavbarBrand,
@@ -7,8 +7,8 @@ import {
   NavbarToggle,
 } from "flowbite-react";
 
-import { usePathname } from 'next/navigation';
-import { Logo } from './Logo';
+import { usePathname } from "next/navigation";
+import { Logo } from "./Logo";
 const navLinks = [
   {
     name: "Tour",
@@ -47,7 +47,7 @@ export default function NavbarWithCTAButton() {
       className="bg-primary z-30 top-0 left-0 w-full justify-end sticky"
     >
       <NavbarBrand href="/">
-        <Logo fillColor="#404040"/>
+        <Logo className="dark:fill-white fill-accent" />
       </NavbarBrand>
       <div className="flex md:order-2">
         <NavbarToggle className="text-accent-light dark:text-primary" />
