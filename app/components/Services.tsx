@@ -59,7 +59,7 @@ export default async function Services() {
   return (
     <div
       id="servizi"
-      className="bg-[url(https://images.unsplash.com/photo-1530458738063-22ed42fa27c9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center items-center min-h-screen justify-center py-10 snap-start overflow-auto flex flex-col flex-1"
+      className="bg-[url(https://images.unsplash.com/photo-1530458738063-22ed42fa27c9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center items-center justify-center py-16 snap-start overflow-auto flex flex-col flex-1 min-h-max"
     >
       <h3 className="text-center text-3xl text-white">SERVIZI</h3>
       <Accordion
