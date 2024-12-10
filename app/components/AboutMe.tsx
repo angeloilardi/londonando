@@ -6,7 +6,7 @@ export default function AboutMe() {
     <>
       <div
         id="aboutme"
-        className="bg-background-light flex flex-col flex-1 lg:flex-row dark:bg-gray-600 snap-start"
+        className="bg-background-light flex flex-col flex-1 lg:flex-row dark:bg-gray-600"
       >
         <div className="flex flex-col flex-1 max-h-screen border-8 border-transparent gap-2 overflow-hidden ">
           <img
