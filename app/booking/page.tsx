@@ -1,11 +1,10 @@
-import FormBooking from "../components/FormBooking";
-
+import FormBooking from "../components/Forms/components/FormBooking";
 
 export default function Booking({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
-  }) {
+}) {
   console.log(searchParams);
   return (
     <div className="py-6 flex flex-col items-center bg-background-light dark:bg-gray-600">
@@ -17,7 +16,7 @@ export default function Booking({
         </div>
       </div>
 
-      <FormBooking/>
+      <FormBooking />
     </div>
   );
 }

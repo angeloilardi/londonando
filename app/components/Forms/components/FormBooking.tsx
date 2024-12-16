@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Button, Label, TextInput, Textarea } from "flowbite-react";
 import FormLayout from "./FormLayout";
 
@@ -6,14 +6,13 @@ import { useParams, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 export function Form() {
-  return 
+  return;
 }
-
 
 export default function FormBooking() {
   const [formShown, setFormShown] = useState(false);
 
-  const {slug} = useParams()
+  const { slug } = useParams();
   return (
     <>
       <Button

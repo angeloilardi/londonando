@@ -1,13 +1,10 @@
-
-
 import { type CustomFlowbiteTheme } from "flowbite-react";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
 import { Carousel } from "flowbite-react";
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
-import FormBooking from "@/app/components/FormBooking";
-
+import FormBooking from "@/app/components/Forms/components/FormBooking";
 
 // custom theme to fix scroll not working on Chrome
 const customTheme: CustomFlowbiteTheme["carousel"] = {
@@ -50,7 +47,7 @@ async function getTour(slug: string) {
   return data.data.page;
 }
 
-export default  async function Tour({ params }: { params: { slug: string } }) {
+export default async function Tour({ params }: { params: { slug: string } }) {
   const tourData = await getTour(params.slug);
   return (
     <div className="prose w-full py-6 px-5 mx-auto bg-off-white dark:bg-gray-600">
@@ -109,4 +106,3 @@ export default  async function Tour({ params }: { params: { slug: string } }) {
     </div>
   );
 }
-

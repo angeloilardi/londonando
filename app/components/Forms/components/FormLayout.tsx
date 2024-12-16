@@ -1,11 +1,10 @@
 "use client";
 
-import FormSubmitButton from "@/app/components/FormSubmitButton";
+import FormSubmitButton from "@/app/components/Forms/components/FormSubmitButton";
 import { Modal, Flowbite } from "flowbite-react";
 import { FaCheckCircle } from "react-icons/fa";
 import { submitForm } from "@/app/actions";
 import { useRef, useState } from "react";
-
 
 export default function FormServices({
   children,
@@ -36,8 +35,9 @@ export default function FormServices({
 
       <Flowbite>
         <form
+          noValidate
           ref={ref}
-          className="flex flex-col gap-4 justify-center mx-auto max-w-3xl py-3"
+          className="flex flex-col gap-4 justify-center mx-auto max-w-3xl py-3 group"
           // action="https://api.web3forms.com/submit"
           // method="POST"
           action={async (formData) => {
