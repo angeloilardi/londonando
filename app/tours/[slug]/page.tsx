@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Carousel } from "flowbite-react";
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
-import FormBooking from "@/app/components/Forms/components/FormBooking";
+import FormBooking from "@/app/components/Forms/FormBooking";
 
 // custom theme to fix scroll not working on Chrome
 const customTheme: CustomFlowbiteTheme["carousel"] = {

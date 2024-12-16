@@ -54,7 +54,6 @@ export default function FormContacts() {
       <TextAreaInput
         name="message"
         label="Scrivi qui il tuo messaggio"
-        error="Inserisci il tuo messaggio"
         required
       />
     </div>

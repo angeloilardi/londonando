@@ -3,14 +3,12 @@ import { InputHTMLAttributes } from "react";
 interface InputProps extends InputHTMLAttributes<HTMLTextAreaElement> {
   name: string;
   label: string;
-  error: string;
   required?: boolean;
 }
 
 export default function TextAreaInput({
   name,
   label,
-  error,
   placeholder = " ",
   required = true,
   ...otherProps
@@ -21,7 +19,7 @@ export default function TextAreaInput({
         htmlFor="message"
         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
       >
-        Your message
+       {label}
       </label>
       <textarea
         id="message"

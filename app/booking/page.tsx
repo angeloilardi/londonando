@@ -1,4 +1,4 @@
-import FormBooking from "../components/Forms/components/FormBooking";
+import FormBooking from "../components/Forms/FormBooking";
 
 export default function Booking({
   searchParams,

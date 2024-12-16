@@ -16,7 +16,7 @@ export default function SelectInput({
     <div className="flex flex-col gap-2 mb-2">
       <label
         htmlFor={name}
-        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        className="block text-sm font-medium text-gray-900 dark:text-white"
       >
         {label}
       </label>
