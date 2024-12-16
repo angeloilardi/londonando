@@ -85,7 +85,7 @@ export default function FormBooking() {
           <TextInput
             name="number"
             label="Numero di telefono"
-            error="Inserisci un numero di teleofno valido"
+            error="Inserisci un numero di telefono valido"
             type="tel"
             pattern="^\+?[0-9]{10,14}$"
           />

@@ -31,7 +31,7 @@ export default function FormContacts() {
       <TextInput
         name="number"
         label="Numero di telefono"
-        error="Inserisci un numero di teleofno valido"
+        error="Inserisci un numero di telefono valido"
         type="tel"
         pattern="^\+?[0-9]{10,14}$"
       />
@@ -55,6 +55,9 @@ export default function FormContacts() {
         name="message"
         label="Scrivi qui il tuo messaggio"
         required
+        error="Non dimenticare di inserire il tuo messaggio :)"
+        minLength={10}
+        placeholder=""
       />
     </div>
   );
