@@ -15,7 +15,7 @@ export default function ShadowInputs() {
           type="date"
           min={new Date().toLocaleDateString("fr-ca")}
           label="Data"
-          error="Inserire la data"
+          error="Inserire una data valida"
           defaultValue={new Date().toLocaleDateString("fr-ca")}
         />
         <TextInput

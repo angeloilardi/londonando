@@ -9,7 +9,7 @@ export default function FormAirport() {
           type="date"
           min={new Date().toLocaleDateString("fr-ca")}
           label="Data di arrivo"
-          error="Inserire la data di arrivo"
+          error="Inserire una data valida"
           defaultValue={new Date().toLocaleDateString("fr-ca")}
         />
         <TextInput
