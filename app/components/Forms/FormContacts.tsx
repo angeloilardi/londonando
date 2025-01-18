@@ -25,7 +25,7 @@ export default function FormContacts() {
       <TextInput
         name="confirm-email"
         label="Conferma indirizzo email"
-        error="L'indirizzo email non combacia"
+        error="Inserisci un indirizzo email valido"
         type="email"
       />
       <TextInput
@@ -56,8 +56,8 @@ export default function FormContacts() {
         label="Scrivi qui il tuo messaggio"
         required
         error="Non dimenticare di inserire il tuo messaggio :)"
-        minLength={2}
-        placeholder=" "
+        minLength={1}
+        placeholder=""
       />
     </div>
   );

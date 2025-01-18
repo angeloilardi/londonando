@@ -78,7 +78,7 @@ export default function FormBooking() {
             <TextInput
               name="confirm-email"
               label="Conferma indirizzo email"
-              error="L'indirizzo email non combacia"
+              error="Inserisci un indirizzo email valido"
               type="email"
             />
           </div>
