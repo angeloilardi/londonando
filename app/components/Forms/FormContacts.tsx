@@ -57,7 +57,7 @@ export default function FormContacts() {
         required
         error="Non dimenticare di inserire il tuo messaggio :)"
         minLength={1}
-        placeholder=""
+        placeholder=" "
       />
     </div>
   );
