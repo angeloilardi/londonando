@@ -15,15 +15,7 @@ import { redirect } from "next/navigation";
 // }
 
 
-export async function sendForm(formData: FormData) {
-    const price = formData.get('price') as string;
-    const currentRoute = formData.get("current-route");
-    redirect(`/booking?tour=${currentRoute}&num=${encodeURI(price)}`)
-
-}
-
 export async function submitForm( formData: FormData) {
-
     try {
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",

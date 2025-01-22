@@ -46,8 +46,8 @@ export default function FooterWithSocialMediaIcons() {
             <div>
               <Footer.Title title="Legal" className="!mb-2" />
               <Footer.LinkGroup col className="!space-y-1">
-                <Footer.Link href="privacy-policy">Privacy Policy</Footer.Link>
-                <Footer.Link href="terms-and-conditions">Terms & Conditions</Footer.Link>
+                <Footer.Link href="/privacy-policy">Privacy Policy</Footer.Link>
+                <Footer.Link href="/terms-and-conditions">Terms & Conditions</Footer.Link>
               </Footer.LinkGroup>
             </div>
           </div>

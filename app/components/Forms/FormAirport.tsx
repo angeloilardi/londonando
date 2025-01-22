@@ -44,7 +44,7 @@ export default function FormAirport() {
       </div>
       <TextInput
         name="destination"
-        label="Hotel/altra detinazione"
+        label="Hotel/altra destinazione"
         error="Inserire l'indirizzo di destinazione"
       />
       <TextInput

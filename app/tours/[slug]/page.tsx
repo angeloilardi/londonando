@@ -60,49 +60,53 @@ export default async function Tour({ params }: { params: { slug: string } }) {
       <h1 className="text-3xl mb-5 text-center text-accent dark:text-white">
         {tourData.title}
       </h1>
-      <div className="w-90 max-w-xl my-16 mobile-landscape:my-4 mx-auto aspect-[3/2] mobile-landscape:h-[200px] mobile-landscape:w-auto">
-        <Carousel theme={customTheme}>
-          {tourData.pictures.length !== 0 ? (
-            tourData.pictures.map(
-              (picture: { url: string; alt: string; id: string }) => {
-                return (
-                  <Image
-                    key={picture.id}
-                    src={picture.url}
-                    alt={picture.alt}
-                    width={500}
-                    height={350}
-                    className="mb-5"
-                  />
-                );
-              }
-            )
-          ) : (
-            <Image
-              src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-              alt=""
-              width={300}
-              height={300}
+        <div className="w-90 max-w-xl my-16 mobile-landscape:my-4 mx-auto aspect-[3/2] mobile-landscape:h-[200px] mobile-landscape:w-auto">
+          <Carousel theme={customTheme}>
+            {tourData.pictures.length !== 0 ? (
+              tourData.pictures.map(
+                (picture: { url: string; alt: string; id: string }) => {
+                  return (
+                    <Image
+                      key={picture.id}
+                      src={picture.url}
+                      alt={picture.alt}
+                      width={500}
+                      height={350}
+                      className="mb-5"
+                    />
+                  );
+                }
+              )
+            ) : (
+              <Image
+                src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                alt=""
+                width={300}
+                height={300}
+              />
+            )}
+          </Carousel>
+        </div>
+        <div className="max-w-3xl text-justify mx-auto">
+          {tourData.content && (
+            <RichText
+              content={tourData?.content?.json}
+              renderers={{
+                p: ({ children }) => (
+                  <p className="mb-5 text-accent dark:text-indigo-50">
+                    {children}
+                  </p>
+                ),
+              }}
             />
           )}
-        </Carousel>
+          <p className="">
+            CANCELLAZIONI: Rimborso completo previo preavviso di almeno 48 ore
+            prima dell'inizio del tour. Eventuali biglietti per ingressi e/o
+            mezzi di trasporto non sono rimborsabili.
+          </p>
+          <FormBooking />
+        </div>
       </div>
-
-      <div className="max-w-3xl text-justify mx-auto">
-        {tourData.content && (
-          <RichText
-            content={tourData?.content?.json}
-            renderers={{
-              p: ({ children }) => (
-                <p className="mb-5 text-accent dark:text-indigo-50">
-                  {children}
-                </p>
-              ),
-            }}
-          />
-        )}
-        <FormBooking />
-      </div>
-    </div>
   );
 }
