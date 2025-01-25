@@ -10,7 +10,9 @@ import { useSearchParams } from "next/navigation";
 
 export default function FormContacts() {
   const [requestType, setRequestType] = useState<string>("");
+
   const searchParams = useSearchParams();
+  const request = searchParams.get("request");
 
   const options = [
     {
@@ -26,8 +28,6 @@ export default function FormContacts() {
       label: "Richiesta generica",
     },
   ];
-
-  const request = searchParams.get("request");
 
   useEffect(() => {
     request && setRequestType(request);
