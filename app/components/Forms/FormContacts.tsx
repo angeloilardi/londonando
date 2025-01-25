@@ -1,14 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormOther from "./FormOther";
 import FormAirport from "./FormAirport";
 import TextInput from "./components/TextInput";
 import SelectInput from "./components/SelectInput";
 import TextAreaInput from "./components/TextAreaInput";
+import { useSearchParams } from "next/navigation";
 
 export default function FormContacts() {
-  const [requestType, setRequestType] = useState<string>("generic");
+  const [requestType, setRequestType] = useState<string>("");
+  const searchParams = useSearchParams();
+
+  const options = [
+    {
+      value: "hotel",
+      label: "Transfer aeroporto/hotel",
+    },
+    {
+      value: "other",
+      label: "Transfer altre destinazioni",
+    },
+    {
+      value: "generic",
+      label: "Richiesta generica",
+    },
+  ];
+
+  const request = searchParams.get("request");
+
+  useEffect(() => {
+    request && setRequestType(request);
+  }, [request]);
   return (
     <div>
       <TextInput
@@ -36,21 +59,18 @@ export default function FormContacts() {
         pattern="^\+?[0-9]{10,14}$"
       />
       <SelectInput
-        name={"Tipo di richiesta"}
+        name={"request-type"}
         label={"Tipo di richiesta"}
-        options={[
-          "Richiesta generica",
-          "Transfer aeroport/hotel",
-          "Transfer altre destinazioni",
-        ]}
+        value={requestType}
+        options={options}
         onChange={(e) => setRequestType(e.target.value)}
       />
       {/* fields for airport transfers request */}
-      {requestType === "Transfer aeroport/hotel" && <FormAirport />}
+      {requestType === "hotel" && <FormAirport />}
 
       {/* fields for other destinations requests */}
 
-      {requestType === "Transfer altre destinazioni" && <FormOther />}
+      {requestType === "other" && <FormOther />}
       <TextAreaInput
         name="message"
         label="Scrivi qui il tuo messaggio"

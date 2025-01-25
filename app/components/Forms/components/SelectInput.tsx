@@ -3,7 +3,10 @@ import { InputHTMLAttributes } from "react";
 interface InputProps extends InputHTMLAttributes<HTMLSelectElement> {
   name: string;
   label: string;
-  options: string[];
+  options: 
+    {value: string,
+    label:string}[]
+
 }
 
 export default function SelectInput({
@@ -22,13 +25,14 @@ export default function SelectInput({
       </label>
       <select
         id={name}
+        name={name}
         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         {...otherProps}
       >
         {options.map((option, i) => {
           return (
-            <option key={option + i} value={option}>
-              {option}
+            <option key={'option' + i} value={option.value}>
+              {option.label}
             </option>
           );
         })}

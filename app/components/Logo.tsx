@@ -18,9 +18,9 @@ export const Logo = ({ className }: { className: string }) => {
           width="439.784"
           height="54.08"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorinterpolation-filters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"

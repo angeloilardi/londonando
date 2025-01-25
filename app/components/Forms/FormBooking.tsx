@@ -90,7 +90,7 @@ export default function FormBooking() {
             pattern="^\+?[0-9]{10,14}$"
           />
           {/* Notes */}
-          <TextAreaInput required label="Note" name="notes" error="Ricorda di inserire un messaggio" placeholder=""/>
+          <TextAreaInput label="Note" name="notes"/>
         </FormLayout>
       )}
     </>
