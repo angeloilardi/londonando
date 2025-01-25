@@ -1,6 +1,29 @@
 import SelectInput from "./components/SelectInput";
 import TextInput from "./components/TextInput";
 export default function FormAirport() {
+
+  const options = [
+    {
+      value: "Gatwick",
+      label: "Gatwick",
+    },
+    {
+      value: "Heathrow",
+      label: "Heathrow",
+    },
+    {
+      value: "London City",
+      label: "London City",
+    },
+    {
+      value: "Stansted",
+      label: "Stansted",
+    },
+    {
+      value: "Luton",
+      label: "Luton",
+    }
+  ];
   return (
     <>
       <div className="md:grid-cols-3 md:grid md:gap-6">
@@ -33,7 +56,7 @@ export default function FormAirport() {
         <SelectInput
           name="airport"
           label="Aeroporto"
-          options={["Gatwick", "Heathrow", "London City", "Stansted", "Luton"]}
+          options={options}
         />
         <TextInput
           name="flight-number"

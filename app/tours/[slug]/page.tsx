@@ -62,7 +62,7 @@ export default async function Tour({ params }: { params: { slug: string } }) {
       </h1>
         <div className="w-90 max-w-xl my-16 mobile-landscape:my-4 mx-auto aspect-[3/2] mobile-landscape:h-[200px] mobile-landscape:w-auto">
           <Carousel theme={customTheme}>
-            {tourData.pictures.length !== 0 ? (
+            {tourData.pictures && (
               tourData.pictures.map(
                 (picture: { url: string; alt: string; id: string }) => {
                   return (
@@ -77,14 +77,7 @@ export default async function Tour({ params }: { params: { slug: string } }) {
                   );
                 }
               )
-            ) : (
-              <Image
-                src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-                alt=""
-                width={300}
-                height={300}
-              />
-            )}
+            ) }
           </Carousel>
         </div>
         <div className="max-w-3xl text-justify mx-auto">
