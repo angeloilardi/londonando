@@ -7,6 +7,45 @@ import TextInput from "./components/TextInput";
 
 export default function ShadowInputs() {
   const [formChoice, setFormChoice] = useState("Aeroporto");
+
+  const airports = [
+    {
+      value: "Gatwick",
+      label: "Gatwick",
+    },
+    {
+      value: "Heathrow",
+      label: "Heathrow",
+    },
+    {
+      value: "London City",
+      label: "London City",
+    },
+    {
+      value: "Stansted",
+      label: "Stansted",
+    },
+    {
+      value: "Luton",
+      label: "Luton",
+    }
+  ];
+
+  const options = [
+    {
+      value: "Aeroporto",
+      label: "Aeroporto",
+    },
+    {
+      value: "Hotel",
+      label: "Hotel",
+    },
+    {
+      value: "Stazione",
+      label: "Stazione",
+    }
+  ];
+
   return (
     <>
       <div className="md:grid-cols-2 md:grid md:gap-6">
@@ -30,14 +69,14 @@ export default function ShadowInputs() {
       <SelectInput
         name="Luogo di partenza"
         label="Luogo di partenza"
-        options={["Aeroporto", "Hotel", "Stazione"]}
+        options={options}
         onChange={(e) => setFormChoice(e.target.value)}
       />
       {formChoice === "Aeroporto" && (
         <SelectInput
           name="airport"
           label="Aeroporto"
-          options={["Gatwick", "Heathrow", "London City", "Stansted", "Luton"]}
+          options={airports}
         />
       )}
       {formChoice === "Hotel" && (
