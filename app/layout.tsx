@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${rubik.className}`}>
+    <html lang="en" className={`${rubik.className} scroll-smooth`}>
       <meta charSet="utf-8"></meta>
       <body className="overflow-x-hidden relative h-screen flex flex-col">
         <Navbar />

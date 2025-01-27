@@ -9,7 +9,7 @@ import TextAreaInput from "./components/TextAreaInput";
 import { useSearchParams } from "next/navigation";
 
 export default function FormContacts() {
-  const [requestType, setRequestType] = useState<string>("");
+  const [requestType, setRequestType] = useState<string>("generic");
 
   const searchParams = useSearchParams();
   const request = searchParams.get("request");
