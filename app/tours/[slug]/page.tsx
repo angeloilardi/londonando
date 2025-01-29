@@ -93,7 +93,7 @@ export default async function Tour({ params }: { params: { slug: string } }) {
           />
         )}
         <p className="text-accent dark:text-indigo-50">
-          CANCELLAZIONI: Rimborso completo previo preavviso di almeno 48 ore
+          CANCELLAZIONI: Rimborso completo solo previo preavviso di almeno 48 ore
           prima dell'inizio del tour. Eventuali biglietti per ingressi e/o mezzi
           di trasporto non sono rimborsabili.
         </p>
