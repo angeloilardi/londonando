@@ -8,9 +8,10 @@ import { Analytics } from "@vercel/analytics/react";
 const rubik = Rubik({ subsets: ["latin"]});
 
 export const metadata = {
-  title: 'Londonando',
-  description: 'Tour guide in London',
-}
+  title: "Londonando",
+  description:
+    "Scopri Londra e i suoi dintorni con i nostri tour e visite guidate. Esplora la storia, la cultura e le meraviglie della capitale britannica.",
+};
 
 export default function RootLayout({
   children,
