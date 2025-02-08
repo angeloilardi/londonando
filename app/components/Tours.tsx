@@ -54,9 +54,9 @@ next: { revalidate: 60 }
       className="w-full p-5 mx-auto bg-primary-light dark:bg-gray-600 min-h-max flex flex-col justify-center gap-6"
       id="tours"
     >
-      <h1 className="text-3xl md:py-16 text-center text-accent dark:text-white mobile-landscape:mt-2">
+      <h2 className="text-3xl md:py-16 text-center text-accent dark:text-white mobile-landscape:mt-2">
         SCOPRI TUTTI I TOUR
-      </h1>
+      </h2>
       <div className="flex gap-4 relative overflow-scroll snap-x snap-mandatory">
         {tours.map((tour: Tour) => {
           return (
@@ -79,9 +79,9 @@ next: { revalidate: 60 }
                 },
               }}
             >
-              <h5 className="text-2xl tracking-tight text-accent dark:text-white mobile-landscape:text-sm overflow-hidden">
+              <h3 className="text-2xl tracking-tight text-accent dark:text-white mobile-landscape:text-sm overflow-hidden">
                 {tour.title}{" "}
-              </h5>
+              </h3>
               <p className="font-normal text-accent-light dark:text-gray-100 mt-3 mobile-landscape:hidden">
                 {tour.subtitle}{" "}
               </p>
