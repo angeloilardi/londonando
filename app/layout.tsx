@@ -3,14 +3,19 @@ import { Rubik } from 'next/font/google'
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
 
 
 const rubik = Rubik({ subsets: ["latin"]});
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Londonando",
   description:
     "Scopri Londra e i suoi dintorni con i nostri tour e visite guidate. Esplora la storia, la cultura e le meraviglie della capitale britannica.",
+  metadataBase: new URL("https://londonando.com"),
+  alternates: {
+    canonical: "/"
+  },
 };
 
 export default function RootLayout({
