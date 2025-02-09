@@ -12,7 +12,7 @@ import { Logo } from "./Logo";
 const navLinks = [
   {
     name: "Tour",
-    route: "tours",
+    route: "tour",
   },
   {
     name: "Servizi",
@@ -20,7 +20,7 @@ const navLinks = [
   },
   {
     name: "Chi sono",
-    route: "aboutme",
+    route: "chi-sono",
   },
   {
     name: "Recensioni",
@@ -28,7 +28,7 @@ const navLinks = [
   },
   {
     name: "Contatti",
-    route: "contacts",
+    route: "contatti",
   },
 ];
 

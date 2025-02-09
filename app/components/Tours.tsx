@@ -52,7 +52,7 @@ next: { revalidate: 60 }
   return (
     <div
       className="w-full p-5 mx-auto bg-primary-light dark:bg-gray-600 min-h-max flex flex-col justify-center gap-6"
-      id="tours"
+      id="tour"
     >
       <h2 className="text-3xl md:py-16 text-center text-accent dark:text-white mobile-landscape:mt-2">
         SCOPRI TUTTI I TOUR

@@ -3,7 +3,7 @@ import FormLayout from "./Forms/components/FormLayout";
 
 export default function Contacts() {
   return (
-    <div className="bg-background-light px-8 dark:bg-gray-600" id="contacts">
+    <div className="bg-background-light px-8 dark:bg-gray-600" id="contatti">
       <h3 className="text-center text-3xl pt-16">CONTATTI</h3>
       <FormLayout>
         <p className="my-6 dark:text-white text-accent">

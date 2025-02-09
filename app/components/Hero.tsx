@@ -30,7 +30,7 @@ export default function Hero() {
               Tour e visite di Londra e dintorni in Italiano!
             </h2>
           </Slide>
-          <Link href="/#tours">
+          <Link href="/#tour">
             <AttentionSeeker effect="heartBeat" delay={2000} duration={2000}>
               <button className="outline-white p-3 rounded-md outline mt-5 text-xl uppercase">
                 Scopri i tour

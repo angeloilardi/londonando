@@ -92,9 +92,9 @@ export default async function Services() {
                   }}
                 />
                 {service.title.includes("AEROPORTO") ? (
-                  <ButtonInfo url={"?request=hotel&#contacts"} />
+                  <ButtonInfo url={"?request=hotel&#contatti"} />
                 ) : service.title.includes("ALTRE") ? (
-                  <ButtonInfo url={"?request=other&#contacts"} />
+                  <ButtonInfo url={"?request=other&#contatti"} />
                 ) : (
                   ""
                 )}

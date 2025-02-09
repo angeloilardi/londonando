@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <>
       <div
-        id="aboutme"
+        id="chi-sono"
         className="bg-background-light flex flex-col flex-1 lg:flex-row dark:bg-gray-600"
       >
         <div className="flex flex-col flex-1 max-h-screen border-8 border-transparent gap-2 overflow-hidden ">
