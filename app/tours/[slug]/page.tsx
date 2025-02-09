@@ -28,6 +28,7 @@ async function getTour(slug: string) {
     id
     title
     price
+    subtitle
     content {
       json
     }
@@ -45,6 +46,15 @@ async function getTour(slug: string) {
   });
   const data = await res.json();
   return data.data.page;
+}
+
+// Example to fetch data statically or dynamically
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const tour = await getTour(params.slug);
+  return {
+    title: tour.title,
+    description: tour.subtitle,
+  };
 }
 
 export default async function Tour({ params }: { params: { slug: string } }) {
@@ -93,9 +103,9 @@ export default async function Tour({ params }: { params: { slug: string } }) {
           />
         )}
         <p className="text-accent dark:text-indigo-50">
-          CANCELLAZIONI: Rimborso completo solo previo preavviso di almeno 48 ore
-          prima dell'inizio del tour. Eventuali biglietti per ingressi e/o mezzi
-          di trasporto non sono rimborsabili.
+          CANCELLAZIONI: Rimborso completo solo previo preavviso di almeno 48
+          ore prima dell'inizio del tour. Eventuali biglietti per ingressi e/o
+          mezzi di trasporto non sono rimborsabili.
         </p>
         <FormBooking />
       </div>

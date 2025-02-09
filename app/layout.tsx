@@ -9,12 +9,15 @@ import type { Metadata } from "next";
 const rubik = Rubik({ subsets: ["latin"]});
 
 export const metadata: Metadata = {
-  title: "Londonando",
+  title: {
+    default: "Londonando",
+    template: "%s | Londonando",
+  },
   description:
     "Scopri Londra e i suoi dintorni con i nostri tour e visite guidate. Esplora la storia, la cultura e le meraviglie della capitale britannica.",
   metadataBase: new URL("https://londonando.com"),
   alternates: {
-    canonical: "/"
+    canonical: "/",
   },
 };
 
