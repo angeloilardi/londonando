@@ -1,6 +1,7 @@
 import { Footer } from "flowbite-react";
-import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsTelephone } from "react-icons/bs";
 import { FaTripadvisor } from "react-icons/fa";
+import { MdOutlineMail} from "react-icons/md"
 import { Logo } from "./Logo";
 
 export default function FooterWithSocialMediaIcons() {
@@ -8,10 +9,20 @@ export default function FooterWithSocialMediaIcons() {
     <Footer container className="mt-auto">
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-          <div className="py-4">
+          <div className="py-4 mb-6 text-gray-500">
             <Logo className="fill-gray-500 dark:fill-white" />
+            <ul className="text-sm flex flex-col gap-2 dark:text-white">
+              <li className="flex gap-3 items-center">
+                <BsTelephone size="20px" className="fill-gray-500" />
+                <a href="tel:+447437479642">+44 7437 479642</a>
+              </li>
+              <li className="flex gap-3 items-center">
+                <MdOutlineMail size={"20px"} className="fill-gray-500" />
+                <a href="mailto:info@londonado.com">info@londonado.com</a>
+              </li>
+            </ul>
           </div>
-          <div className="grid grid-cols-3 gap-6 sm:mt-4 sm:gap-10">
+          <div className="grid grid-cols-3 gap-6 sm:mt-4 sm:gap-10 sm:ml-6">
             <div>
               <Footer.Title title="about" className="!mb-2" />
               <Footer.LinkGroup col className="!space-y-1">
@@ -47,7 +58,9 @@ export default function FooterWithSocialMediaIcons() {
               <Footer.Title title="Legal" className="!mb-2" />
               <Footer.LinkGroup col className="!space-y-1">
                 <Footer.Link href="/privacy-policy">Privacy Policy</Footer.Link>
-                <Footer.Link href="/terms-and-conditions">Terms & Conditions</Footer.Link>
+                <Footer.Link href="/terms-and-conditions">
+                  Terms & Conditions
+                </Footer.Link>
               </Footer.LinkGroup>
             </div>
           </div>
