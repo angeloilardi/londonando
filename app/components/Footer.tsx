@@ -18,7 +18,7 @@ export default function FooterWithSocialMediaIcons() {
               </li>
               <li className="flex gap-3 items-center">
                 <MdOutlineMail size={"20px"} className="fill-gray-500" />
-                <a href="mailto:info@londonado.com">info@londonado.com</a>
+                <a href="mailto:info@londonando.com">info@londonando.com</a>
               </li>
             </ul>
           </div>
