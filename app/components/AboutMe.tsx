@@ -9,21 +9,27 @@ export default function AboutMe() {
         className="bg-background-light flex flex-col flex-1 lg:flex-row dark:bg-gray-600"
       >
         <div className="flex flex-col flex-1 max-h-screen border-8 border-transparent gap-2 overflow-hidden ">
-          <img
+          <Image
             src="/images/c80194bd-0d7f-4fe8-acc4-bdbce2409148.jpeg"
-            alt=""
+            alt="foto con visitatori"
             className="h-[33.3%] object-cover"
+            width={400}
+            height={300}
           />
 
-          <img
+          <Image
             src="/images/IMG_1733.jpeg"
-            alt=""
+            alt="foto con visitatori"
             className="h-[33.3%] object-cover"
+            width={400}
+            height={300}
           />
-          <img
+          <Image
             src="/images/IMG_6351 copy.jpg"
-            alt=""
+            alt="foto con visitatori"
             className="h-[33.3%] object-cover"
+            width={400}
+            height={300}
           />
         </div>
         <div className="p-6 flex-1 text-accent dark:text-white leading-[1.42] gap-4 flex flex-col justify-between">
